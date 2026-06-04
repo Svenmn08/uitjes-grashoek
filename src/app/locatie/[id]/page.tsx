@@ -112,7 +112,8 @@ export default async function LocationPage({
             </div>
           </div>
 
-          {/* Prices */}
+          {/* Prices — only show when there's an actual entry fee or explicitly free */}
+          {(loc.entreeKinderen > 0 || loc.entreeVolwassenen > 0 || loc.tags.includes("gratis")) && (
           <div>
             <h2 className="font-semibold text-[var(--foreground)] mb-2">Entree</h2>
             <div className="flex gap-4">
@@ -130,6 +131,7 @@ export default async function LocationPage({
               </div>
             </div>
           </div>
+          )}
 
           {/* Tags + leeftijd */}
           <div>

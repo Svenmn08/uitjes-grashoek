@@ -134,9 +134,9 @@ function LocationCard({ loc }: { loc: Location }) {
               <span className="text-[var(--accent)] font-medium">
                 v.a. {formatPrice(loc.entreeKinderen)}
               </span>
-            ) : (
+            ) : loc.tags.includes("gratis") ? (
               <span className="text-[var(--primary)] font-medium">Gratis</span>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
