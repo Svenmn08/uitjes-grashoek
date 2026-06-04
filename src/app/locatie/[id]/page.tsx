@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   getLocationById,
   getAllLocations,
@@ -18,6 +19,29 @@ import {
 
 export async function generateStaticParams() {
   return getAllLocations().map((loc) => ({ id: String(loc.id) }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const loc = getLocationById(Number(id));
+  if (!loc) return {};
+
+  const driveMin = getDriveMinutes(loc);
+  const description = `${loc.description} In ${loc.city}, ca. ${formatMinutes(driveMin)} rijden vanuit Grashoek.`;
+
+  return {
+    title: `${loc.name} – Uitjes Grashoek`,
+    description,
+    openGraph: {
+      title: `${loc.name} – Uitjes Grashoek`,
+      description,
+      images: loc.photo ? [{ url: loc.photo }] : [],
+    },
+  };
 }
 
 export default async function LocationPage({

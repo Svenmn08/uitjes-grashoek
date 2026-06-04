@@ -12,6 +12,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3001"
+  ),
   title: "Uitjes Grashoek – Dag uit in de Peel & Maas",
   description:
     "Inspiratie voor daguitstapjes vanuit Grashoek. Gefilterd op activiteit, weer en reistijd.",
