@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 
@@ -7,10 +7,22 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#3d5228",
+};
+
 export const metadata: Metadata = {
   title: "Uitjes Grashoek – Dag uit in de Peel & Maas",
   description:
     "Inspiratie voor daguitstapjes vanuit Grashoek. Gefilterd op activiteit, weer en reistijd.",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Uitjes Grashoek",
+  },
+  icons: {
+    apple: "/icons/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
