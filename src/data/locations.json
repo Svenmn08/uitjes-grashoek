@@ -7,14 +7,13 @@
     "lat": 51.347,
     "lng": 5.955,
     "website": "https://www.beringerzand.nl",
-    "description": "Mooi bos om te wandelen en spelen in de natuur.",
+    "description": "Mooi bos bij Beringerzand om te wandelen en te genieten van de natuur.",
     "entreeKinderen": 6,
     "entreeVolwassenen": 6,
     "reistijdAutoMin": 9,
     "reistijdFietsMin": 21,
     "winterGesloten": false,
     "tags": [
-      "spelen",
       "kijken",
       "buiten"
     ],
