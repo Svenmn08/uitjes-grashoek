@@ -1291,8 +1291,8 @@
     "lng": 5.681,
     "website": "https://www.ijzerenmanweert.nl",
     "description": "Recreatiegebied in Weert met binnenzwembad, buitenzwemmeer en strand.",
-    "entreeKinderen": 0,
-    "entreeVolwassenen": 0,
+    "entreeKinderen": 7.25,
+    "entreeVolwassenen": 7.25,
     "reistijdAutoMin": 30,
     "reistijdFietsMin": 75,
     "winterGesloten": false,
@@ -1301,8 +1301,7 @@
       "zwembadbuiten",
       "spelen",
       "buiten",
-      "slechtweer",
-      "gratis"
+      "slechtweer"
     ],
     "leeftijdMin": 0,
     "leeftijdMax": null,
