@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, lazy, Suspense } from "react";
+import { useState, useMemo, lazy, Suspense, useEffect } from "react";
 import Link from "next/link";
 import {
   type Location,
@@ -72,75 +72,270 @@ function TagBadge({ tag, small }: { tag: Tag; small?: boolean }) {
   );
 }
 
-function LocationCard({ loc }: { loc: Location }) {
+function LocationCard({
+  loc,
+  inRoute,
+  onToggleRoute,
+}: {
+  loc: Location;
+  inRoute: boolean;
+  onToggleRoute: (e: React.MouseEvent) => void;
+}) {
   const driveMin = getDriveMinutes(loc);
   const bikeMin = getBikeMinutes(loc);
   const leeftijd = formatLeeftijd(loc);
-  const todayHours = getTodayHours(loc); // string = open, null = gesloten, undefined = onbekend
+  const todayHours = getTodayHours(loc);
 
   return (
-    <Link
-      href={`/locatie/${loc.id}`}
-      className="block group bg-white rounded-xl shadow-sm border border-[var(--border)] hover:shadow-md hover:border-[var(--primary)] transition-all duration-200 overflow-hidden"
-    >
-      {loc.photo && (
-        <div className="h-44 overflow-hidden">
-          <img
-            src={loc.photo}
-            alt={loc.name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      )}
-      <div className="p-5">
-        <div className="flex items-start justify-between gap-2 mb-2">
-          <h3 className="font-semibold text-lg text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors leading-tight">
-            {loc.name}
-          </h3>
-          <div className="flex flex-col items-end gap-1 shrink-0">
-            {loc.winterGesloten && (
-              <span className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 font-medium">
-                ❄️ Winter dicht
-              </span>
-            )}
-            {todayHours !== undefined && (
-              <span className={`text-xs rounded-full px-2 py-0.5 font-medium ${todayHours ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
-                {todayHours ? `🟢 ${todayHours}` : "🔴 Vandaag dicht"}
+    <div className="relative group">
+      <Link
+        href={`/locatie/${loc.id}`}
+        className="block bg-white rounded-xl shadow-sm border border-[var(--border)] hover:shadow-md hover:border-[var(--primary)] transition-all duration-200 overflow-hidden"
+      >
+        {loc.photo && (
+          <div className="h-44 overflow-hidden">
+            <img
+              src={loc.photo}
+              alt={loc.name}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        )}
+        <div className="p-5">
+          <div className="flex items-start justify-between gap-2 mb-2">
+            <h3 className="font-semibold text-lg text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors leading-tight">
+              {loc.name}
+            </h3>
+            <div className="flex flex-col items-end gap-1 shrink-0">
+              {loc.winterGesloten && (
+                <span className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 font-medium">
+                  ❄️ Winter dicht
+                </span>
+              )}
+              {todayHours !== undefined && (
+                <span className={`text-xs rounded-full px-2 py-0.5 font-medium ${todayHours ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
+                  {todayHours ? `🟢 ${todayHours}` : "🔴 Vandaag dicht"}
+                </span>
+              )}
+            </div>
+          </div>
+
+          <p className="text-sm text-[var(--muted)] mb-3 line-clamp-2">{loc.description}</p>
+
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            {[...new Set(loc.tags)].map((tag) => (
+              <TagBadge key={tag} tag={tag} small />
+            ))}
+            {leeftijd && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 text-amber-800 font-medium text-xs px-2 py-0.5">
+                👶 {leeftijd}
               </span>
             )}
           </div>
+
+          <div className="flex items-center justify-between text-sm border-t border-[var(--border)] pt-3 mt-auto">
+            <div className="flex gap-3 text-[var(--muted)]">
+              <span title="Reistijd auto">🚗 {formatMinutes(driveMin)}</span>
+              <span title="Reistijd fiets">🚲 {formatMinutes(bikeMin)}</span>
+            </div>
+            <div className="text-right">
+              {loc.entreeKinderen > 0 ? (
+                <span className="text-[var(--accent)] font-medium">
+                  v.a. {formatPrice(loc.entreeKinderen)}
+                </span>
+              ) : loc.tags.includes("gratis") ? (
+                <span className="text-[var(--primary)] font-medium">Gratis</span>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      </Link>
+
+      {/* Route toggle button — floats over the card */}
+      <button
+        onClick={onToggleRoute}
+        title={inRoute ? "Verwijder uit dagplanning" : "Voeg toe aan dagplanning"}
+        aria-label={inRoute ? "Verwijder uit dagplanning" : "Voeg toe aan dagplanning"}
+        className={`absolute top-2 right-2 z-10 w-9 h-9 rounded-full flex items-center justify-center text-base font-bold shadow-md transition-all ${
+          inRoute
+            ? "bg-[var(--primary)] text-white scale-110"
+            : "bg-white/90 text-[var(--primary)] border-2 border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white"
+        }`}
+      >
+        {inRoute ? "✓" : "+"}
+      </button>
+    </div>
+  );
+}
+
+function RoutePlanPanel({
+  routeLocations,
+  onRemove,
+  onMove,
+  onClear,
+  onClose,
+}: {
+  routeLocations: Location[];
+  onRemove: (id: number) => void;
+  onMove: (id: number, direction: -1 | 1) => void;
+  onClear: () => void;
+  onClose: () => void;
+}) {
+  const totalKinderen = routeLocations.reduce((sum, l) => sum + l.entreeKinderen, 0);
+  const totalVolwassenen = routeLocations.reduce((sum, l) => sum + l.entreeVolwassenen, 0);
+
+  const HOME_LAT = 51.3917;
+  const HOME_LNG = 5.9417;
+  const mapsUrl =
+    routeLocations.length > 0
+      ? `https://www.google.com/maps/dir/${HOME_LAT},${HOME_LNG}/${routeLocations
+          .map((l) => `${l.lat},${l.lng}`)
+          .join("/")}`
+      : null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex flex-col justify-end bg-black/40"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white rounded-t-2xl shadow-2xl max-h-[85vh] flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between p-5 border-b border-[var(--border)]">
+          <div>
+            <h2 className="text-xl font-bold text-[var(--foreground)]">🗺️ Dagplanning</h2>
+            {routeLocations.length > 0 && (
+              <p className="text-sm text-[var(--muted)] mt-0.5">
+                {routeLocations.length} uitstapje{routeLocations.length !== 1 ? "s" : ""} gepland
+              </p>
+            )}
+          </div>
+          <div className="flex items-center gap-3">
+            {routeLocations.length > 0 && (
+              <button
+                onClick={onClear}
+                className="text-sm text-red-500 hover:text-red-700 font-medium"
+              >
+                Alles wissen
+              </button>
+            )}
+            <button
+              onClick={onClose}
+              className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-[var(--muted)] transition-colors"
+            >
+              ✕
+            </button>
+          </div>
         </div>
 
-        <p className="text-sm text-[var(--muted)] mb-3 line-clamp-2">{loc.description}</p>
+        {/* Content */}
+        <div className="overflow-y-auto flex-1 p-5">
+          {routeLocations.length === 0 ? (
+            <div className="text-center py-10 text-[var(--muted)]">
+              <div className="text-5xl mb-3">🗺️</div>
+              <p className="font-semibold text-base">Nog geen uitstapjes gepland</p>
+              <p className="text-sm mt-1">Klik op + bij een uitstapje om het toe te voegen</p>
+            </div>
+          ) : (
+            <>
+              {/* Vertrekpunt */}
+              <div className="flex items-center gap-3 mb-1 pl-1">
+                <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center text-sm shrink-0">
+                  🏠
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[var(--foreground)]">Grashoek</p>
+                  <p className="text-xs text-[var(--muted)]">Vertrekpunt</p>
+                </div>
+              </div>
 
-        <div className="flex flex-wrap gap-1.5 mb-4">
-          {[...new Set(loc.tags)].map((tag) => (
-            <TagBadge key={tag} tag={tag} small />
-          ))}
-          {leeftijd && (
-            <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 text-amber-800 font-medium text-xs px-2 py-0.5">
-              👶 {leeftijd}
-            </span>
+              {routeLocations.map((loc, i) => (
+                <div key={loc.id} className="flex gap-3 mt-0">
+                  {/* Connector line + number */}
+                  <div className="flex flex-col items-center shrink-0 w-8">
+                    <div className="w-0.5 bg-dashed bg-[var(--border)] flex-none h-4" style={{ borderLeft: "2px dashed var(--border)" }} />
+                    <div className="w-8 h-8 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-xs font-bold shrink-0">
+                      {i + 1}
+                    </div>
+                  </div>
+
+                  {/* Location info */}
+                  <div className="flex-1 min-w-0 py-1 pb-2">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="min-w-0">
+                        <p className="font-semibold text-sm text-[var(--foreground)] leading-snug">{loc.name}</p>
+                        <p className="text-xs text-[var(--muted)] mt-0.5">
+                          {loc.city} · 🚗 {formatMinutes(getDriveMinutes(loc))}
+                          {loc.entreeKinderen > 0 && ` · v.a. ${formatPrice(loc.entreeKinderen)}`}
+                          {loc.entreeKinderen === 0 && loc.tags.includes("gratis") && " · Gratis"}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-1 shrink-0">
+                        <button
+                          onClick={() => onMove(loc.id, -1)}
+                          disabled={i === 0}
+                          className="w-7 h-7 flex items-center justify-center rounded hover:bg-gray-100 text-[var(--muted)] disabled:opacity-30 transition-colors text-xs"
+                          title="Omhoog"
+                        >
+                          ▲
+                        </button>
+                        <button
+                          onClick={() => onMove(loc.id, 1)}
+                          disabled={i === routeLocations.length - 1}
+                          className="w-7 h-7 flex items-center justify-center rounded hover:bg-gray-100 text-[var(--muted)] disabled:opacity-30 transition-colors text-xs"
+                          title="Omlaag"
+                        >
+                          ▼
+                        </button>
+                        <button
+                          onClick={() => onRemove(loc.id)}
+                          className="w-7 h-7 flex items-center justify-center rounded hover:bg-red-50 text-gray-400 hover:text-red-500 transition-colors"
+                          title="Verwijder"
+                        >
+                          ✕
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {/* Totalen */}
+              <div className="mt-5 pt-4 border-t border-[var(--border)] space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-[var(--muted)]">Totaal per kind</span>
+                  <span className="font-semibold">{formatPrice(totalKinderen)}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-[var(--muted)]">Totaal per volwassene</span>
+                  <span className="font-semibold">{formatPrice(totalVolwassenen)}</span>
+                </div>
+              </div>
+            </>
           )}
         </div>
 
-        <div className="flex items-center justify-between text-sm border-t border-[var(--border)] pt-3 mt-auto">
-          <div className="flex gap-3 text-[var(--muted)]">
-            <span title="Reistijd auto">🚗 {formatMinutes(driveMin)}</span>
-            <span title="Reistijd fiets">🚲 {formatMinutes(bikeMin)}</span>
+        {/* Footer with Maps button */}
+        {mapsUrl && (
+          <div className="p-5 border-t border-[var(--border)]">
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-semibold py-3 px-4 rounded-xl transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Open route in Google Maps
+            </a>
           </div>
-          <div className="text-right">
-            {loc.entreeKinderen > 0 ? (
-              <span className="text-[var(--accent)] font-medium">
-                v.a. {formatPrice(loc.entreeKinderen)}
-              </span>
-            ) : loc.tags.includes("gratis") ? (
-              <span className="text-[var(--primary)] font-medium">Gratis</span>
-            ) : null}
-          </div>
-        </div>
+        )}
       </div>
-    </Link>
+    </div>
   );
 }
 
@@ -152,6 +347,60 @@ export default function LocationFilters({ locations }: { locations: Location[] }
   const [hideWinterClosed, setHideWinterClosed] = useState(false);
   const [sortBy, setSortBy] = useState<SortBy>("default");
   const [viewMode, setViewMode] = useState<ViewMode>("lijst");
+  const [routeIds, setRouteIds] = useState<number[]>([]);
+  const [showRoute, setShowRoute] = useState(false);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("uitjes-route");
+      if (saved) setRouteIds(JSON.parse(saved));
+    } catch {}
+  }, []);
+
+  const saveRoute = (ids: number[]) => {
+    try {
+      localStorage.setItem("uitjes-route", JSON.stringify(ids));
+    } catch {}
+  };
+
+  const toggleRoute = (e: React.MouseEvent, id: number) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setRouteIds((prev) => {
+      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
+      saveRoute(next);
+      return next;
+    });
+  };
+
+  const removeFromRoute = (id: number) => {
+    setRouteIds((prev) => {
+      const next = prev.filter((x) => x !== id);
+      saveRoute(next);
+      return next;
+    });
+  };
+
+  const moveInRoute = (id: number, direction: -1 | 1) => {
+    setRouteIds((prev) => {
+      const i = prev.indexOf(id);
+      const newI = i + direction;
+      if (newI < 0 || newI >= prev.length) return prev;
+      const next = [...prev];
+      [next[i], next[newI]] = [next[newI], next[i]];
+      saveRoute(next);
+      return next;
+    });
+  };
+
+  const clearRoute = () => {
+    setRouteIds([]);
+    saveRoute([]);
+  };
+
+  const routeLocations = routeIds
+    .map((id) => locations.find((l) => l.id === id))
+    .filter(Boolean) as Location[];
 
   const toggleTag = (tag: Tag) => {
     setSelectedTags((prev) => {
@@ -436,13 +685,49 @@ export default function LocationFilters({ locations }: { locations: Location[] }
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filtered.map((loc) => (
-                  <LocationCard key={loc.id} loc={loc} />
+                  <LocationCard
+                    key={loc.id}
+                    loc={loc}
+                    inRoute={routeIds.includes(loc.id)}
+                    onToggleRoute={(e) => toggleRoute(e, loc.id)}
+                  />
                 ))}
               </div>
             )}
           </>
         )}
       </div>
+
+      {/* Floating dagplanning button */}
+      <button
+        onClick={() => setShowRoute(true)}
+        className={`fixed bottom-6 right-6 z-40 flex items-center gap-2 py-3 px-5 rounded-full shadow-lg font-semibold transition-all duration-200 ${
+          routeIds.length > 0
+            ? "bg-[var(--primary)] text-white hover:bg-[var(--primary-dark)] scale-100"
+            : "bg-white text-[var(--muted)] border-2 border-[var(--border)] hover:border-[var(--primary)] hover:text-[var(--primary)]"
+        }`}
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+        </svg>
+        <span>Dagplanning</span>
+        {routeIds.length > 0 && (
+          <span className="bg-white text-[var(--primary)] rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold leading-none">
+            {routeIds.length}
+          </span>
+        )}
+      </button>
+
+      {/* Route plan panel */}
+      {showRoute && (
+        <RoutePlanPanel
+          routeLocations={routeLocations}
+          onRemove={removeFromRoute}
+          onMove={moveInRoute}
+          onClear={clearRoute}
+          onClose={() => setShowRoute(false)}
+        />
+      )}
     </div>
   );
 }
