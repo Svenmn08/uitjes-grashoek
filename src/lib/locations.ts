@@ -92,6 +92,18 @@ export function getTodayHours(loc: Location): string | null | undefined {
   return loc.openingHours[key]; // string = open, null = gesloten, undefined = onbekend
 }
 
+export function isOpenNow(loc: Location): boolean | null {
+  const hours = getTodayHours(loc);
+  if (hours === undefined) return null;
+  if (!hours) return false;
+  const match = hours.match(/^(\d{1,2}):(\d{2})-(\d{1,2}):(\d{2})$/);
+  if (!match) return null;
+  const sh = Number(match[1]), sm = Number(match[2]), eh = Number(match[3]), em = Number(match[4]);
+  const now = new Date();
+  const nowMins = now.getHours() * 60 + now.getMinutes();
+  return nowMins >= sh * 60 + sm && nowMins < eh * 60 + em;
+}
+
 export function formatLeeftijd(loc: Location): string | null {
   const { leeftijdMin: min, leeftijdMax: max } = loc;
   const hasMin = min !== null && min !== undefined;

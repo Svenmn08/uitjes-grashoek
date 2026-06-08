@@ -13,6 +13,7 @@ import {
   formatPrice,
   formatLeeftijd,
   getTodayHours,
+  isOpenNow,
 } from "@/lib/locations";
 
 
@@ -85,6 +86,7 @@ function LocationCard({
   const bikeMin = getBikeMinutes(loc);
   const leeftijd = formatLeeftijd(loc);
   const todayHours = getTodayHours(loc);
+  const openNow = isOpenNow(loc);
 
   return (
     <div className="relative group">
@@ -113,8 +115,18 @@ function LocationCard({
                 </span>
               )}
               {todayHours !== undefined && (
-                <span className={`text-xs rounded-full px-2 py-0.5 font-medium ${todayHours ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
-                  {todayHours ? `🟢 ${todayHours}` : "🔴 Vandaag dicht"}
+                <span className={`text-xs rounded-full px-2 py-0.5 font-medium ${
+                  openNow === true
+                    ? "bg-green-100 text-green-700"
+                    : todayHours
+                    ? "bg-yellow-100 text-yellow-700"
+                    : "bg-red-100 text-red-700"
+                }`}>
+                  {openNow === true
+                    ? `🟢 Nu open · ${todayHours}`
+                    : todayHours
+                    ? `🕐 ${todayHours}`
+                    : "🔴 Vandaag dicht"}
                 </span>
               )}
             </div>
@@ -345,6 +357,7 @@ export default function LocationFilters({ locations }: { locations: Location[] }
   const [maxMinutes, setMaxMinutes] = useState(999);
   const [search, setSearch] = useState("");
   const [hideWinterClosed, setHideWinterClosed] = useState(false);
+  const [showOnlyOpenNow, setShowOnlyOpenNow] = useState(false);
   const [sortBy, setSortBy] = useState<SortBy>("default");
   const [viewMode, setViewMode] = useState<ViewMode>("lijst");
   const [routeIds, setRouteIds] = useState<number[]>([]);
@@ -432,6 +445,8 @@ export default function LocationFilters({ locations }: { locations: Location[] }
 
       if (hideWinterClosed && loc.winterGesloten) return false;
 
+      if (showOnlyOpenNow && isOpenNow(loc) !== true) return false;
+
       return true;
     });
 
@@ -443,12 +458,12 @@ export default function LocationFilters({ locations }: { locations: Location[] }
       });
     }
     return result;
-  }, [locations, search, selectedTags, travelMode, maxMinutes, hideWinterClosed, sortBy]);
+  }, [locations, search, selectedTags, travelMode, maxMinutes, hideWinterClosed, showOnlyOpenNow, sortBy]);
 
   const maxOptions =
     travelMode === "auto" ? MAX_DRIVE_OPTIONS : MAX_BIKE_OPTIONS;
   const hasActiveFilters =
-    selectedTags.size > 0 || maxMinutes < 999 || !!search || hideWinterClosed;
+    selectedTags.size > 0 || maxMinutes < 999 || !!search || hideWinterClosed || showOnlyOpenNow;
 
   return (
     <div>
@@ -581,6 +596,15 @@ export default function LocationFilters({ locations }: { locations: Location[] }
               <label className="inline-flex items-center gap-2 text-sm text-[var(--muted)] cursor-pointer select-none">
                 <input
                   type="checkbox"
+                  checked={showOnlyOpenNow}
+                  onChange={(e) => setShowOnlyOpenNow(e.target.checked)}
+                  className="rounded accent-[var(--primary)]"
+                />
+                🟢 Nu open
+              </label>
+              <label className="inline-flex items-center gap-2 text-sm text-[var(--muted)] cursor-pointer select-none">
+                <input
+                  type="checkbox"
                   checked={hideWinterClosed}
                   onChange={(e) => setHideWinterClosed(e.target.checked)}
                   className="rounded accent-[var(--primary)]"
@@ -596,6 +620,7 @@ export default function LocationFilters({ locations }: { locations: Location[] }
                   setMaxMinutes(999);
                   setSearch("");
                   setHideWinterClosed(false);
+                  setShowOnlyOpenNow(false);
                 }}
                 className="text-sm text-[var(--accent)] underline hover:no-underline"
               >
