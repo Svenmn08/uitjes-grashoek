@@ -34,12 +34,18 @@ const FILTER_TAGS: Tag[] = [
 
 const WEER_TAGS: Tag[] = [
   "buiten",
+  "zwembadbuiten",
   "slechtweer",
+  "binnenspeeltuin",
+  "zwembadbinnen",
 ];
 
 const WEER_DISPLAY: Record<string, { icon: string; label: string }> = {
-  buiten:     { icon: "☀️", label: "Zonnig" },
-  slechtweer: { icon: "🌧️", label: "Regen" },
+  buiten:        { icon: "☀️", label: "Zonnig" },
+  zwembadbuiten: { icon: "🌡️", label: "Warm weer" },
+  slechtweer:    { icon: "🌧️", label: "Regen" },
+  binnenspeeltuin: { icon: "🥶", label: "Koude dag" },
+  zwembadbinnen: { icon: "🏊", label: "Bewolkt/Nat" },
 };
 
 const MAX_DRIVE_OPTIONS = [
@@ -592,25 +598,27 @@ export default function LocationFilters({ locations }: { locations: Location[] }
 
           {/* Extra toggles + reset */}
           <div className="flex items-center justify-between flex-wrap gap-2">
-            <div className="flex flex-wrap gap-4">
-              <label className="inline-flex items-center gap-2 text-sm text-[var(--muted)] cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  checked={showOnlyOpenNow}
-                  onChange={(e) => setShowOnlyOpenNow(e.target.checked)}
-                  className="rounded accent-[var(--primary)]"
-                />
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setShowOnlyOpenNow((v) => !v)}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all border ${
+                  showOnlyOpenNow
+                    ? "bg-green-600 text-white border-green-600 shadow-sm"
+                    : "bg-white text-[var(--muted)] border-[var(--border)] hover:border-green-600 hover:text-green-700"
+                }`}
+              >
                 🟢 Nu open
-              </label>
-              <label className="inline-flex items-center gap-2 text-sm text-[var(--muted)] cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  checked={hideWinterClosed}
-                  onChange={(e) => setHideWinterClosed(e.target.checked)}
-                  className="rounded accent-[var(--primary)]"
-                />
-                Verberg winterse sluitingen
-              </label>
+              </button>
+              <button
+                onClick={() => setHideWinterClosed((v) => !v)}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all border ${
+                  hideWinterClosed
+                    ? "bg-blue-600 text-white border-blue-600 shadow-sm"
+                    : "bg-white text-[var(--muted)] border-[var(--border)] hover:border-blue-600 hover:text-blue-700"
+                }`}
+              >
+                ❄️ Verberg winter
+              </button>
             </div>
 
             {hasActiveFilters && (
