@@ -79,6 +79,11 @@ export function getBikeMinutes(loc: Location): number {
   return Math.round((km / 15) * 60);
 }
 
+export function getDriveMinutesBetween(loc1: Location, loc2: Location): number {
+  const km = haversineKm(loc1.lat, loc1.lng, loc2.lat, loc2.lng);
+  return Math.round(km * 1.2 + 5);
+}
+
 export const WEEKDAYS: WeekDay[] = ["ma", "di", "wo", "do", "vr", "za", "zo"];
 export const WEEKDAY_LABELS: Record<WeekDay, string> = {
   ma: "Ma", di: "Di", wo: "Wo", do: "Do", vr: "Vr", za: "Za", zo: "Zo",
