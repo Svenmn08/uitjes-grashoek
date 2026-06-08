@@ -45,7 +45,7 @@ const WEER_DISPLAY: Record<string, { icon: string; label: string }> = {
   zwembadbuiten: { icon: "🌡️", label: "Warm weer" },
   slechtweer:    { icon: "🌧️", label: "Regen" },
   binnenspeeltuin: { icon: "🥶", label: "Koude dag" },
-  zwembadbinnen: { icon: "🏊", label: "Bewolkt/Nat" },
+  zwembadbinnen: { icon: "⛅", label: "Bewolkt" },
 };
 
 const MAX_DRIVE_OPTIONS = [
@@ -362,7 +362,6 @@ export default function LocationFilters({ locations }: { locations: Location[] }
   const [travelMode, setTravelMode] = useState<TravelMode>("auto");
   const [maxMinutes, setMaxMinutes] = useState(999);
   const [search, setSearch] = useState("");
-  const [hideWinterClosed, setHideWinterClosed] = useState(false);
   const [showOnlyOpenNow, setShowOnlyOpenNow] = useState(false);
   const [sortBy, setSortBy] = useState<SortBy>("default");
   const [viewMode, setViewMode] = useState<ViewMode>("lijst");
@@ -449,8 +448,6 @@ export default function LocationFilters({ locations }: { locations: Location[] }
         travelMode === "auto" ? getDriveMinutes(loc) : getBikeMinutes(loc);
       if (travelMin > maxMinutes) return false;
 
-      if (hideWinterClosed && loc.winterGesloten) return false;
-
       if (showOnlyOpenNow && isOpenNow(loc) !== true) return false;
 
       return true;
@@ -464,12 +461,12 @@ export default function LocationFilters({ locations }: { locations: Location[] }
       });
     }
     return result;
-  }, [locations, search, selectedTags, travelMode, maxMinutes, hideWinterClosed, showOnlyOpenNow, sortBy]);
+  }, [locations, search, selectedTags, travelMode, maxMinutes, showOnlyOpenNow, sortBy]);
 
   const maxOptions =
     travelMode === "auto" ? MAX_DRIVE_OPTIONS : MAX_BIKE_OPTIONS;
   const hasActiveFilters =
-    selectedTags.size > 0 || maxMinutes < 999 || !!search || hideWinterClosed || showOnlyOpenNow;
+    selectedTags.size > 0 || maxMinutes < 999 || !!search || showOnlyOpenNow;
 
   return (
     <div>
@@ -609,16 +606,6 @@ export default function LocationFilters({ locations }: { locations: Location[] }
               >
                 🟢 Nu open
               </button>
-              <button
-                onClick={() => setHideWinterClosed((v) => !v)}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all border ${
-                  hideWinterClosed
-                    ? "bg-blue-600 text-white border-blue-600 shadow-sm"
-                    : "bg-white text-[var(--muted)] border-[var(--border)] hover:border-blue-600 hover:text-blue-700"
-                }`}
-              >
-                ❄️ Verberg winter
-              </button>
             </div>
 
             {hasActiveFilters && (
@@ -627,7 +614,6 @@ export default function LocationFilters({ locations }: { locations: Location[] }
                   setSelectedTags(new Set());
                   setMaxMinutes(999);
                   setSearch("");
-                  setHideWinterClosed(false);
                   setShowOnlyOpenNow(false);
                 }}
                 className="text-sm text-[var(--accent)] underline hover:no-underline"
