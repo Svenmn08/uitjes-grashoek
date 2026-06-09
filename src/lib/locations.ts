@@ -12,7 +12,8 @@ export type Tag =
   | "binnenspeeltuin"
   | "slechtweer"
   | "gratis"
-  | "buiten";
+  | "buiten"
+  | "dierentuin";
 
 export type WeekDay = "ma" | "di" | "wo" | "do" | "vr" | "za" | "zo";
 
@@ -153,6 +154,7 @@ export const TAG_LABELS: Record<Tag, string> = {
   slechtweer: "Bij Slecht Weer",
   gratis: "Gratis",
   buiten: "Buiten",
+  dierentuin: "Dierentuin",
 };
 
 export const TAG_ICONS: Record<Tag, string> = {
@@ -168,4 +170,5 @@ export const TAG_ICONS: Record<Tag, string> = {
   slechtweer: "🌧️",
   gratis: "✅",
   buiten: "🌿",
+  dierentuin: "🦁",
 };

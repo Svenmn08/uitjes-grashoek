@@ -30,6 +30,7 @@ const FILTER_TAGS: Tag[] = [
   "zwembadbinnen",
   "zwembadbuiten",
   "kinderboerderij",
+  "dierentuin",
   "buitenspeeltuin",
   "binnenspeeltuin",
   "gratis",
