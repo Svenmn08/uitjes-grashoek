@@ -166,7 +166,7 @@
         "reistijdFietsMin":  59,
         "winterGesloten":  false,
         "tags":  [
-                     "kijken",
+                     "spelen",
                      "buitenspeeltuin",
                      "gratis",
                      "buiten"
@@ -192,9 +192,9 @@
         "winterGesloten":  false,
         "tags":  [
                      "spelen",
-                     "kijken",
                      "zwembadbinnen",
-                     "zwembadbinnen",
+                     "zwembadbuiten",
+                     "buiten",
                      "slechtweer"
                  ],
         "leeftijdMin":  0,
@@ -329,7 +329,6 @@
         "reistijdFietsMin":  28,
         "winterGesloten":  true,
         "tags":  [
-                     "zwembadbinnen",
                      "zwembadbuiten",
                      "buiten"
                  ],
@@ -384,6 +383,7 @@
         "reistijdFietsMin":  21,
         "winterGesloten":  false,
         "tags":  [
+                     "spelen",
                      "kijken",
                      "restaurant",
                      "terras",
@@ -484,7 +484,10 @@
         "reistijdFietsMin":  75,
         "winterGesloten":  false,
         "tags":  [
+                     "spelen",
                      "kijken",
+                     "kinderboerderij",
+                     "buitenspeeltuin",
                      "buiten"
                  ],
         "leeftijdMin":  0,
@@ -718,6 +721,7 @@
         "reistijdFietsMin":  111,
         "winterGesloten":  false,
         "tags":  [
+                     "spelen",
                      "kijken",
                      "buitenspeeltuin",
                      "buiten"
@@ -807,7 +811,7 @@
         "reistijdFietsMin":  57,
         "winterGesloten":  false,
         "tags":  [
-                     "kijken",
+                     "spelen",
                      "zwembadbinnen",
                      "slechtweer"
                  ],
@@ -863,7 +867,6 @@
         "winterGesloten":  false,
         "tags":  [
                      "kijken",
-                     "kinderboerderij",
                      "gratis",
                      "buiten"
                  ],
@@ -928,8 +931,10 @@
         "reistijdFietsMin":  80,
         "winterGesloten":  false,
         "tags":  [
+                     "spelen",
                      "kijken",
-                     "zwembadbinnen"
+                     "zwembadbinnen",
+                     "buiten"
                  ],
         "leeftijdMin":  0,
         "leeftijdMax":  null,
@@ -951,6 +956,8 @@
         "reistijdFietsMin":  50,
         "winterGesloten":  false,
         "tags":  [
+                     "spelen",
+                     "kijken",
                      "kinderboerderij",
                      "gratis",
                      "buiten"
@@ -1065,6 +1072,7 @@
                      "spelen",
                      "kijken",
                      "restaurant",
+                     "buitenspeeltuin",
                      "buiten"
                  ],
         "leeftijdMin":  0,
@@ -1095,6 +1103,7 @@
         "reistijdFietsMin":  94,
         "winterGesloten":  false,
         "tags":  [
+                     "spelen",
                      "kijken",
                      "restaurant",
                      "binnenspeeltuin",
