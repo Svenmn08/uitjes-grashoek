@@ -69,7 +69,7 @@ const MAX_BIKE_OPTIONS = [
 ];
 
 type TravelMode = "auto" | "fiets";
-type ViewMode = "lijst" | "kaart";
+type ViewMode = "blok" | "lijst" | "kaart";
 type SortBy = "default" | "reistijd";
 
 function TagBadge({ tag, small }: { tag: Tag; small?: boolean }) {
@@ -179,6 +179,100 @@ function LocationCard({
         title={inRoute ? "Verwijder uit dagplanning" : "Voeg toe aan dagplanning"}
         aria-label={inRoute ? "Verwijder uit dagplanning" : "Voeg toe aan dagplanning"}
         className={`absolute top-2 right-2 z-10 w-9 h-9 rounded-full flex items-center justify-center text-base font-bold shadow-md transition-all ${
+          inRoute
+            ? "bg-[var(--primary)] text-white scale-110"
+            : "bg-white/90 text-[var(--primary)] border-2 border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white"
+        }`}
+      >
+        {inRoute ? "✓" : "+"}
+      </button>
+    </div>
+  );
+}
+
+function LocationRow({
+  loc,
+  inRoute,
+  onToggleRoute,
+}: {
+  loc: Location;
+  inRoute: boolean;
+  onToggleRoute: (e: React.MouseEvent) => void;
+}) {
+  const driveMin = getDriveMinutes(loc);
+  const bikeMin = getBikeMinutes(loc);
+  const leeftijd = formatLeeftijd(loc);
+  const todayHours = getTodayHours(loc);
+  const openNow = isOpenNow(loc);
+
+  return (
+    <div className="relative group">
+      <Link
+        href={`/locatie/${loc.id}`}
+        className="flex items-center gap-3 bg-white rounded-xl border border-[var(--border)] hover:shadow-md hover:border-[var(--primary)] transition-all duration-200 p-3"
+      >
+        {loc.photo ? (
+          <img
+            src={loc.photo}
+            alt={loc.name}
+            className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg object-cover shrink-0"
+          />
+        ) : (
+          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-gray-100 shrink-0 flex items-center justify-center text-3xl">
+            🌳
+          </div>
+        )}
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-2 mb-0.5">
+            <h3 className="font-semibold text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors leading-tight">
+              {loc.name}
+            </h3>
+            <div className="flex flex-col items-end gap-0.5 shrink-0 ml-6">
+              {loc.winterGesloten && (
+                <span className="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 font-medium whitespace-nowrap">
+                  ❄️ Winter dicht
+                </span>
+              )}
+              {todayHours !== undefined && (
+                <span className={`text-xs rounded-full px-2 py-0.5 font-medium whitespace-nowrap ${
+                  openNow === true
+                    ? "bg-green-100 text-green-700"
+                    : todayHours
+                    ? "bg-yellow-100 text-yellow-700"
+                    : "bg-red-100 text-red-700"
+                }`}>
+                  {openNow === true ? `🟢 ${todayHours}` : todayHours ? `🕐 ${todayHours}` : "🔴 Dicht"}
+                </span>
+              )}
+            </div>
+          </div>
+          <p className="text-xs text-[var(--muted)] line-clamp-1 mb-1.5">{loc.description}</p>
+          <div className="flex flex-wrap gap-1 mb-1.5">
+            {[...new Set(loc.tags)].slice(0, 5).map((tag) => (
+              <TagBadge key={tag} tag={tag} small />
+            ))}
+            {leeftijd && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 text-amber-800 font-medium text-xs px-2 py-0.5">
+                👶 {leeftijd}
+              </span>
+            )}
+          </div>
+          <div className="flex items-center gap-3 text-xs text-[var(--muted)]">
+            <span>🚗 {formatMinutes(driveMin)}</span>
+            <span>🚲 {formatMinutes(bikeMin)}</span>
+            {loc.entreeKinderen > 0 ? (
+              <span className="text-[var(--accent)] font-medium">v.a. {formatPrice(loc.entreeKinderen)}</span>
+            ) : loc.tags.includes("gratis") ? (
+              <span className="text-[var(--primary)] font-medium">Gratis</span>
+            ) : null}
+          </div>
+        </div>
+      </Link>
+      <button
+        onClick={onToggleRoute}
+        title={inRoute ? "Verwijder uit dagplanning" : "Voeg toe aan dagplanning"}
+        aria-label={inRoute ? "Verwijder uit dagplanning" : "Voeg toe aan dagplanning"}
+        className={`absolute top-2 right-2 z-10 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shadow-md transition-all ${
           inRoute
             ? "bg-[var(--primary)] text-white scale-110"
             : "bg-white/90 text-[var(--primary)] border-2 border-[var(--primary)] hover:bg-[var(--primary)] hover:text-white"
@@ -399,9 +493,10 @@ export default function LocationFilters({ locations }: { locations: Location[] }
   const [search, setSearch] = useState("");
   const [showOnlyOpenNow, setShowOnlyOpenNow] = useState(false);
   const [sortBy, setSortBy] = useState<SortBy>("default");
-  const [viewMode, setViewMode] = useState<ViewMode>("lijst");
+  const [viewMode, setViewMode] = useState<ViewMode>("blok");
   const [routeItems, setRouteItems] = useState<RouteItem[]>([]);
   const [showRoute, setShowRoute] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(true);
   const routeIds = routeItems.map((r) => r.id);
 
   useEffect(() => {
@@ -546,6 +641,21 @@ export default function LocationFilters({ locations }: { locations: Location[] }
       <div className="max-w-6xl mx-auto px-4 py-6">
         {/* Filters */}
         <div className="bg-white rounded-2xl border border-[var(--border)] shadow-sm p-5 mb-6">
+          <button
+            className="flex items-center justify-between w-full sm:hidden pb-3 mb-3 border-b border-[var(--border)]"
+            onClick={() => setFiltersOpen((v) => !v)}
+          >
+            <span className="font-semibold text-[var(--foreground)]">
+              Filters
+              {(selectedTags.size > 0 || maxMinutes < 999) && (
+                <span className="ml-2 text-xs bg-[var(--primary)] text-white rounded-full px-1.5 py-0.5">
+                  {selectedTags.size + (maxMinutes < 999 ? 1 : 0)}
+                </span>
+              )}
+            </span>
+            <span className="text-[var(--muted)] text-sm">{filtersOpen ? "▲" : "▼"}</span>
+          </button>
+          <div className={filtersOpen ? "" : "hidden sm:block"}>
           <div className="flex flex-wrap gap-4 mb-4">
             {/* Vervoer */}
             <div>
@@ -600,7 +710,7 @@ export default function LocationFilters({ locations }: { locations: Location[] }
             <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-2">
               Activiteit / Faciliteiten
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex gap-2 flex-nowrap overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible">
               {FILTER_TAGS.map((tag) => (
                 <button
                   key={tag}
@@ -623,7 +733,7 @@ export default function LocationFilters({ locations }: { locations: Location[] }
             <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-2">
               Weer
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex gap-2 flex-nowrap overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible">
               {WEER_TAGS.map((tag) => {
                 const display = WEER_DISPLAY[tag];
                 return (
@@ -673,6 +783,7 @@ export default function LocationFilters({ locations }: { locations: Location[] }
               </button>
             )}
           </div>
+          </div>
         </div>
 
         {/* Results header with view toggle */}
@@ -698,19 +809,26 @@ export default function LocationFilters({ locations }: { locations: Location[] }
             </div>
           </div>
 
-          {/* Lijst / Kaart toggle */}
+          {/* Blok / Lijst / Kaart toggle */}
           <div className="flex rounded-lg border border-[var(--border)] overflow-hidden shadow-sm">
-            {(["lijst", "kaart"] as ViewMode[]).map((mode) => (
+            {(["blok", "lijst", "kaart"] as ViewMode[]).map((mode) => (
               <button
                 key={mode}
                 onClick={() => setViewMode(mode)}
-                className={`flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-colors ${
+                className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors ${
                   viewMode === mode
                     ? "bg-[var(--primary)] text-white"
                     : "bg-white text-[var(--muted)] hover:bg-gray-50"
                 }`}
               >
-                {mode === "lijst" ? (
+                {mode === "blok" ? (
+                  <>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
+                    </svg>
+                    Blok
+                  </>
+                ) : mode === "lijst" ? (
                   <>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
@@ -743,8 +861,8 @@ export default function LocationFilters({ locations }: { locations: Location[] }
           </Suspense>
         )}
 
-        {/* Lijst view */}
-        {viewMode === "lijst" && (
+        {/* Blok view */}
+        {viewMode === "blok" && (
           <>
             {filtered.length === 0 ? (
               <div className="text-center py-16 text-[var(--muted)]">
@@ -756,6 +874,30 @@ export default function LocationFilters({ locations }: { locations: Location[] }
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filtered.map((loc) => (
                   <LocationCard
+                    key={loc.id}
+                    loc={loc}
+                    inRoute={routeIds.includes(loc.id)}
+                    onToggleRoute={(e) => toggleRoute(e, loc.id)}
+                  />
+                ))}
+              </div>
+            )}
+          </>
+        )}
+
+        {/* Lijst view */}
+        {viewMode === "lijst" && (
+          <>
+            {filtered.length === 0 ? (
+              <div className="text-center py-16 text-[var(--muted)]">
+                <div className="text-5xl mb-4">🔍</div>
+                <p className="text-lg font-medium">Geen uitstapjes gevonden</p>
+                <p className="text-sm mt-1">Probeer andere filters</p>
+              </div>
+            ) : (
+              <div className="flex flex-col gap-2">
+                {filtered.map((loc) => (
+                  <LocationRow
                     key={loc.id}
                     loc={loc}
                     inRoute={routeIds.includes(loc.id)}
