@@ -3,7 +3,7 @@ backend:
   repo: Svenmn08/uitjes-grashoek
   branch: main
   auth_type: pkce
-  app_id: VERVANG_MET_JOUW_CLIENT_ID
+  app_id: Ov23liI3huXMID5Y7Kal
 
 media_folder: public/fotos
 public_folder: /fotos
