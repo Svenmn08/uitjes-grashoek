@@ -22,13 +22,13 @@ collections:
             widget: list
             identifier_field: name
             fields:
-              - {name: id, widget: hidden}
+              - {name: id, label: ID, widget: number, value_type: int, hint: "Uniek nummer, niet wijzigen bij bestaande locaties"}
               - {name: name, label: Naam, widget: string}
-              - {name: address, widget: hidden}
-              - {name: city, widget: hidden}
-              - {name: lat, widget: hidden}
-              - {name: lng, widget: hidden}
-              - {name: website, widget: hidden}
+              - {name: address, label: Adres, widget: string}
+              - {name: city, label: Stad, widget: string}
+              - {name: lat, label: Breedtegraad (lat), widget: number, value_type: float, hint: "bijv. 51.4416"}
+              - {name: lng, label: Lengtegraad (lng), widget: number, value_type: float, hint: "bijv. 5.4697"}
+              - {name: website, label: Website URL, widget: string, required: false}
               - {name: description, label: Beschrijving, widget: text}
               - {name: entreeKinderen, label: "Entree kinderen (€)", widget: number, value_type: float, default: 0}
               - {name: entreeVolwassenen, label: "Entree volwassenen (€)", widget: number, value_type: float, default: 0}
@@ -36,7 +36,7 @@ collections:
               - {name: reistijdFietsMin, widget: hidden}
               - {name: winterGesloten, label: "Winter gesloten", widget: boolean, default: false}
               - {name: tags, widget: hidden}
-              - {name: photo, widget: hidden}
+              - {name: photo, label: Foto URL, widget: string, required: false, hint: "bijv. /fotos/locatienaam.jpg"}
               - {name: leeftijdMin, widget: hidden}
               - {name: leeftijdMax, widget: hidden}
               - name: openingHours
