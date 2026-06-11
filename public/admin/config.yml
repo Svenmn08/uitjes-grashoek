@@ -13,8 +13,10 @@ collections:
   - name: locaties
     label: Locaties
     label_singular: Locatie
-    folder: src/data/locations
+    folder: uitjes-app/src/data/locations
     create: true
+    extension: json
+    format: json
     identifier_field: name
     fields:
       - {name: id, label: ID, widget: number, value_type: int, hint: "Uniek nummer — niet wijzigen bij bestaande locaties"}
