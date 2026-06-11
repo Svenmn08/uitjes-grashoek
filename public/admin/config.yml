@@ -2,8 +2,7 @@ backend:
   name: github
   repo: Svenmn08/uitjes-grashoek
   branch: main
-  auth_type: pkce
-  app_id: Ov23liI3huXMID5Y7Kal
+  base_url: https://uitjes-cms-auth.svenmussen08.workers.dev
 
 media_folder: public/fotos
 public_folder: /fotos
