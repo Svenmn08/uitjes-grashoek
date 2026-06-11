@@ -1,0 +1,33 @@
+{
+  "id": 3,
+  "name": "Bij Nijholt",
+  "address": "Lorbaan 1",
+  "city": "Veule",
+  "lat": 51.38,
+  "lng": 6,
+  "website": "https://bijnijholt.nl",
+  "description": "Agrarisch educatiecentrum met buitenspeeltuin en kijkmogelijkheden.",
+  "entreeKinderen": 4,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 11,
+  "reistijdFietsMin": 21,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "buitenspeeltuin",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 10,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "11:00-18:00",
+    "do": null,
+    "vr": "11:00-18:00",
+    "za": "11:00-19:00",
+    "zo": "11:00-19:00"
+  },
+  "photo": "/fotos/3.jpg"
+}

@@ -1,0 +1,32 @@
+{
+  "id": 4,
+  "name": "Ballorig Venlo",
+  "address": "Winkelveldstraat 5",
+  "city": "Venlo",
+  "lat": 51.384,
+  "lng": 6.188,
+  "website": "https://www.ballorig.nl/venlo",
+  "description": "Grote binnenspeeltuin met glijbanen, klimrekken en speelhuizen voor alle leeftijden.",
+  "entreeKinderen": 3.5,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 22,
+  "reistijdFietsMin": 63,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "binnenspeeltuin",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": {
+    "ma": "09:00-18:00",
+    "di": "09:00-18:00",
+    "wo": "09:00-18:00",
+    "do": "09:00-18:00",
+    "vr": "09:00-18:00",
+    "za": "10:00-18:00",
+    "zo": "10:00-18:00"
+  },
+  "photo": "/fotos/4.jpg"
+}

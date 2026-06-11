@@ -1,0 +1,33 @@
+{
+  "id": 31,
+  "name": "Speeltuin Os Blieriëk",
+  "address": "Tollenstraat 1-B",
+  "city": "Venlo",
+  "lat": 51.362,
+  "lng": 6.153,
+  "website": "https://www.osblieriek.nl",
+  "description": "Gezellige speeltuin in de wijk Blerick in Venlo.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 22,
+  "reistijdFietsMin": 65,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "buitenspeeltuin",
+    "gratis",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "13:00-17:00",
+    "do": null,
+    "vr": "13:00-18:00",
+    "za": "13:00-17:00",
+    "zo": "13:00-17:00"
+  },
+  "photo": "/fotos/31.jpg"
+}

@@ -1,0 +1,32 @@
+{
+  "id": 20,
+  "name": "Avonturenpark Valdeludo",
+  "address": "Bandertlaan 9",
+  "city": "Echt",
+  "lat": 51.1,
+  "lng": 5.867,
+  "website": "https://avonturenparkvaldeludo.nl/",
+  "description": "Avonturenpark met klimtoestellen, tarzanbanen en speelparadijs voor actieve kinderen.",
+  "entreeKinderen": 11.95,
+  "entreeVolwassenen": 11.95,
+  "reistijdAutoMin": 48,
+  "reistijdFietsMin": 147,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "buitenspeeltuin",
+    "buiten"
+  ],
+  "leeftijdMin": 4,
+  "leeftijdMax": 12,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "13:00-18:00",
+    "do": null,
+    "vr": null,
+    "za": "11:00-18:00",
+    "zo": "11:00-18:00"
+  },
+  "photo": "/fotos/20.jpg"
+}

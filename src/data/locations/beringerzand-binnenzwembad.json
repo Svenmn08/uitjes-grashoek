@@ -1,0 +1,31 @@
+{
+  "id": 10,
+  "name": "Beringerzand Binnenzwembad",
+  "address": "Heide 5",
+  "city": "Panningen",
+  "lat": 51.347,
+  "lng": 5.955,
+  "website": "https://www.beringerzand.nl/nl/faciliteiten/binnenzwembad",
+  "description": "Subtropisch binnenzwembad bij recreatiepark Beringerzand, ook ideaal bij slecht weer.",
+  "entreeKinderen": 6,
+  "entreeVolwassenen": 6,
+  "reistijdAutoMin": 9,
+  "reistijdFietsMin": 21,
+  "winterGesloten": false,
+  "tags": [
+    "zwembadbinnen",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "09:00-17:00",
+    "di": "09:00-17:00",
+    "wo": "09:00-17:00",
+    "do": "09:00-17:00",
+    "vr": "09:00-17:00",
+    "za": "11:15-17:00",
+    "zo": "09:00-17:00"
+  },
+  "photo": "/fotos/10.jpg"
+}

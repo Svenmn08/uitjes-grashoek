@@ -1,0 +1,30 @@
+{
+  "id": 43,
+  "name": "Cascara Gril",
+  "address": "Midden Peelweg 1",
+  "city": "Sevenum",
+  "lat": 51.378,
+  "lng": 5.983,
+  "website": "https://www.cascararodizio.nl",
+  "description": "Braziliaans grilrestaurant aan de Midden Peelweg.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 8,
+  "reistijdFietsMin": 20,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": null,
+    "do": "17:00-23:00",
+    "vr": "17:00-23:00",
+    "za": "17:00-23:00",
+    "zo": null
+  },
+  "photo": "/fotos/43.jpg"
+}

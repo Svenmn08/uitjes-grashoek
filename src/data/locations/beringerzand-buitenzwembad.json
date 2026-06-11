@@ -1,0 +1,31 @@
+{
+  "id": 56,
+  "name": "Beringerzand Buitenzwembad",
+  "address": "Heide 5",
+  "city": "Panningen",
+  "lat": 51.347,
+  "lng": 5.955,
+  "website": "https://www.beringerzand.nl/nl/faciliteiten/buitenzwembad",
+  "description": "Buitenzwembad bij recreatiepark Beringerzand, open in de zomermaanden.",
+  "entreeKinderen": 6,
+  "entreeVolwassenen": 6,
+  "reistijdAutoMin": 9,
+  "reistijdFietsMin": 21,
+  "winterGesloten": true,
+  "tags": [
+    "zwembadbuiten",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "10:00-20:00",
+    "di": "10:00-20:00",
+    "wo": "10:00-20:00",
+    "do": "10:00-20:00",
+    "vr": "10:00-20:00",
+    "za": "10:00-20:00",
+    "zo": "10:00-20:00"
+  },
+  "photo": "/fotos/56.jpg"
+}

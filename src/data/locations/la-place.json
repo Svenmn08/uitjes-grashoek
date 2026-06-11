@@ -1,0 +1,30 @@
+{
+  "id": 47,
+  "name": "La Place",
+  "address": "Kleefsedijk 29",
+  "city": "Sevenum",
+  "lat": 51.38,
+  "lng": 5.985,
+  "website": "https://www.laplace.com",
+  "description": "Restaurant La Place op vakantiepark.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 9,
+  "reistijdFietsMin": 20,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "07:00-21:00",
+    "di": "07:00-21:00",
+    "wo": "07:00-21:00",
+    "do": "07:00-21:00",
+    "vr": "07:00-21:00",
+    "za": "07:00-21:00",
+    "zo": "07:00-21:00"
+  },
+  "photo": "/fotos/47.jpg"
+}

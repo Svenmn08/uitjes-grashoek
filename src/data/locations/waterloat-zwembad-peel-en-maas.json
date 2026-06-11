@@ -1,0 +1,31 @@
+{
+  "id": 11,
+  "name": "Waterloat Zwembad (Peel en Maas)",
+  "address": "Wilhelminastraat 42",
+  "city": "Panningen",
+  "lat": 51.369,
+  "lng": 5.985,
+  "website": "https://www.laco.eu/locatie/peel-en-maas/",
+  "description": "Gemeentelijk zwembad van Peel en Maas.",
+  "entreeKinderen": 9.99,
+  "entreeVolwassenen": 9.99,
+  "reistijdAutoMin": 9,
+  "reistijdFietsMin": 20,
+  "winterGesloten": false,
+  "tags": [
+    "zwembadbinnen",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "08:30-22:30",
+    "di": "08:30-22:30",
+    "wo": "08:30-17:00",
+    "do": "08:30-22:30",
+    "vr": "08:30-22:00",
+    "za": "11:15-16:30",
+    "zo": "09:45-13:00"
+  },
+  "photo": "/fotos/11.jpg"
+}

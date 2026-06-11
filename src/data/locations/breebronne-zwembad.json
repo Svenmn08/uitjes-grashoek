@@ -1,0 +1,23 @@
+{
+  "id": 13,
+  "name": "BreeBronne Zwembad",
+  "address": "Lange heide 9",
+  "city": "Maasbree",
+  "lat": 51.375,
+  "lng": 6.061,
+  "website": "https://www.breebronne.nl/faciliteiten/zwembad",
+  "description": "Zwemmen bij vakantiepark BreeBronne.",
+  "entreeKinderen": 5.5,
+  "entreeVolwassenen": 5.5,
+  "reistijdAutoMin": 15,
+  "reistijdFietsMin": 35,
+  "winterGesloten": false,
+  "tags": [
+    "zwembadbinnen",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/13.jpg"
+}

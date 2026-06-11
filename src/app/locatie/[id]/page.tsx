@@ -1,9 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAllLocations, getLocationById } from "@/lib/locationData";
 import {
-  getLocationById,
-  getAllLocations,
   getDriveMinutes,
   getBikeMinutes,
   formatMinutes,

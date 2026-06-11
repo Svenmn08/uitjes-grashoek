@@ -12,42 +12,37 @@ locale: nl
 collections:
   - name: locaties
     label: Locaties
-    files:
-      - label: Alle locaties
-        name: locations
-        file: src/data/locations.json
+    label_singular: Locatie
+    folder: src/data/locations
+    create: true
+    identifier_field: name
+    fields:
+      - {name: id, label: ID, widget: number, value_type: int, hint: "Uniek nummer — niet wijzigen bij bestaande locaties"}
+      - {name: name, label: Naam, widget: string}
+      - {name: address, label: Adres, widget: string}
+      - {name: city, label: Stad, widget: string}
+      - {name: lat, label: "Breedtegraad (lat)", widget: number, value_type: float, hint: "bijv. 51.4416"}
+      - {name: lng, label: "Lengtegraad (lng)", widget: number, value_type: float, hint: "bijv. 5.4697"}
+      - {name: website, label: Website URL, widget: string, required: false}
+      - {name: description, label: Beschrijving, widget: text}
+      - {name: entreeKinderen, label: "Entree kinderen (€)", widget: number, value_type: float, default: 0}
+      - {name: entreeVolwassenen, label: "Entree volwassenen (€)", widget: number, value_type: float, default: 0}
+      - {name: reistijdAutoMin, label: "Reistijd auto (min)", widget: number, value_type: int, required: false}
+      - {name: reistijdFietsMin, label: "Reistijd fiets (min)", widget: number, value_type: int, required: false}
+      - {name: winterGesloten, label: "Winter gesloten", widget: boolean, default: false}
+      - {name: tags, label: Tags, widget: list, field: {name: tag, widget: string}}
+      - {name: photo, label: "Foto URL", widget: string, required: false, hint: "bijv. /fotos/locatienaam.jpg"}
+      - {name: leeftijdMin, label: "Leeftijd min", widget: number, value_type: int, required: false}
+      - {name: leeftijdMax, label: "Leeftijd max", widget: number, value_type: int, required: false}
+      - name: openingHours
+        label: Openingstijden
+        widget: object
+        required: false
         fields:
-          - name: locations
-            label: Locaties
-            widget: list
-            identifier_field: name
-            fields:
-              - {name: id, label: ID, widget: number, value_type: int, hint: "Uniek nummer, niet wijzigen bij bestaande locaties"}
-              - {name: name, label: Naam, widget: string}
-              - {name: address, label: Adres, widget: string}
-              - {name: city, label: Stad, widget: string}
-              - {name: lat, label: Breedtegraad (lat), widget: number, value_type: float, hint: "bijv. 51.4416"}
-              - {name: lng, label: Lengtegraad (lng), widget: number, value_type: float, hint: "bijv. 5.4697"}
-              - {name: website, label: Website URL, widget: string, required: false}
-              - {name: description, label: Beschrijving, widget: text}
-              - {name: entreeKinderen, label: "Entree kinderen (€)", widget: number, value_type: float, default: 0}
-              - {name: entreeVolwassenen, label: "Entree volwassenen (€)", widget: number, value_type: float, default: 0}
-              - {name: reistijdAutoMin, widget: hidden}
-              - {name: reistijdFietsMin, widget: hidden}
-              - {name: winterGesloten, label: "Winter gesloten", widget: boolean, default: false}
-              - {name: tags, widget: hidden}
-              - {name: photo, label: Foto URL, widget: string, required: false, hint: "bijv. /fotos/locatienaam.jpg"}
-              - {name: leeftijdMin, widget: hidden}
-              - {name: leeftijdMax, widget: hidden}
-              - name: openingHours
-                label: Openingstijden
-                widget: object
-                required: false
-                fields:
-                  - {name: ma, label: Maandag, widget: string, required: false, hint: "bijv. 09:00-17:00 — leeg laten als gesloten die dag"}
-                  - {name: di, label: Dinsdag, widget: string, required: false}
-                  - {name: wo, label: Woensdag, widget: string, required: false}
-                  - {name: do, label: Donderdag, widget: string, required: false}
-                  - {name: vr, label: Vrijdag, widget: string, required: false}
-                  - {name: za, label: Zaterdag, widget: string, required: false}
-                  - {name: zo, label: Zondag, widget: string, required: false}
+          - {name: ma, label: Maandag, widget: string, required: false, hint: "bijv. 09:00-17:00 — leeg laten als gesloten"}
+          - {name: di, label: Dinsdag, widget: string, required: false}
+          - {name: wo, label: Woensdag, widget: string, required: false}
+          - {name: do, label: Donderdag, widget: string, required: false}
+          - {name: vr, label: Vrijdag, widget: string, required: false}
+          - {name: za, label: Zaterdag, widget: string, required: false}
+          - {name: zo, label: Zondag, widget: string, required: false}

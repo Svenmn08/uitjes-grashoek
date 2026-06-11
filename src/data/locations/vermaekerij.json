@@ -1,0 +1,31 @@
+{
+  "id": 53,
+  "name": "Vermaekerij",
+  "address": "Spiesberg 23",
+  "city": "Grashoek",
+  "lat": 51.39,
+  "lng": 5.943,
+  "website": "https://www.devermaekerij.nl",
+  "description": "Lokaal café en ontmoetingsplek in Grashoek zelf.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 0,
+  "reistijdFietsMin": 1,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant",
+    "terras"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "11:30-23:00",
+    "do": "11:30-23:00",
+    "vr": "11:30-01:00",
+    "za": "11:30-01:00",
+    "zo": "11:30-23:00"
+  },
+  "photo": "/fotos/53.jpg"
+}

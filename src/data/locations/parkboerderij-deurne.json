@@ -1,0 +1,26 @@
+{
+  "id": 33,
+  "name": "Parkboerderij Deurne",
+  "address": "Haageind 37",
+  "city": "Deurne",
+  "lat": 51.457,
+  "lng": 5.798,
+  "website": "https://allekinderboerderijen.nl/noord-brabant/deurne/parkboerderij-deurne",
+  "description": "Kinderboerderij in Deurne met allerlei dieren en speelmogelijkheden.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 20,
+  "reistijdFietsMin": 50,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "kinderboerderij",
+    "gratis",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 10,
+  "openingHours": null,
+  "photo": "/fotos/33.jpg"
+}

@@ -1,0 +1,31 @@
+{
+  "id": 41,
+  "name": "Cafetaria 't Veen",
+  "address": "Soemeersingel 3",
+  "city": "Helenaveen",
+  "lat": 51.365,
+  "lng": 5.88,
+  "website": "https://cafetariatveen.nl",
+  "description": "Gezellige cafetaria in Helenaveen, vlakbij de Peel.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 10,
+  "reistijdFietsMin": 23,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant",
+    "terras"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": "10:00-20:00",
+    "wo": "10:00-20:00",
+    "do": "10:00-20:00",
+    "vr": "10:00-20:00",
+    "za": "10:00-21:00",
+    "zo": "10:00-21:00"
+  },
+  "photo": "/fotos/41.jpg"
+}

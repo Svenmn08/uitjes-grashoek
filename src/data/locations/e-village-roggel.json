@@ -1,0 +1,31 @@
+{
+  "id": 29,
+  "name": "E-village Roggel",
+  "address": "Heldensedijk 3",
+  "city": "Roggel",
+  "lat": 51.2728,
+  "lng": 5.9287,
+  "website": "https://www.e-villageroggel.nl",
+  "description": "Elektrische voertuigen rijden in een veilige omgeving. Leuk voor de hele familie.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 24,
+  "reistijdFietsMin": 57,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "buiten"
+  ],
+  "leeftijdMin": 3,
+  "leeftijdMax": 12,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "13:30-20:00",
+    "do": null,
+    "vr": "13:30-20:00",
+    "za": "13:30-20:00",
+    "zo": "13:30-20:00"
+  },
+  "photo": "/fotos/29.jpg"
+}

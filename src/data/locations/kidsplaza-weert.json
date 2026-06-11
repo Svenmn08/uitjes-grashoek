@@ -1,0 +1,33 @@
+{
+  "id": 19,
+  "name": "Kidsplaza Weert",
+  "address": "Geurtsvenweg 2a",
+  "city": "Weert",
+  "lat": 51.248,
+  "lng": 5.708,
+  "website": "https://kids-plaza.nl/binnenspeeltuin/weert/",
+  "description": "Grote binnenspeeltuin speciaal voor kinderen, met restaurant voor ouders.",
+  "entreeKinderen": 9.99,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 38,
+  "reistijdFietsMin": 95,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "binnenspeeltuin",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": {
+    "ma": "09:30-18:00",
+    "di": "09:30-18:00",
+    "wo": "09:30-18:00",
+    "do": "09:30-18:00",
+    "vr": "09:30-18:00",
+    "za": "09:30-18:00",
+    "zo": "09:30-18:00"
+  },
+  "photo": "/fotos/19.jpg"
+}

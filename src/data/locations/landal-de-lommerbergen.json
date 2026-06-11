@@ -1,0 +1,25 @@
+{
+  "id": 32,
+  "name": "Landal De Lommerbergen",
+  "address": "Lommerbergen 1",
+  "city": "Reuver",
+  "lat": 51.283,
+  "lng": 6.1,
+  "website": "https://www.landal.nl/parken/de-lommerbergen",
+  "description": "Vakantiepark met zwembad, klimtoren en diverse activiteiten voor het hele gezin.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 32,
+  "reistijdFietsMin": 80,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "zwembadbinnen",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/32.jpg"
+}

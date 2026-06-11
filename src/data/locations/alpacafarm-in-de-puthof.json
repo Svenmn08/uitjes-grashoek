@@ -1,0 +1,23 @@
+{
+  "id": 34,
+  "name": "Alpacafarm in de Puthof",
+  "address": "Hoofdstraat 152",
+  "city": "Posterholt",
+  "lat": 51.12,
+  "lng": 6.036,
+  "website": "https://alpacafarm-in-de-puthof.nl/nl/",
+  "description": "Wandel tussen de alpaca's op deze bijzondere boerderij.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 49,
+  "reistijdFietsMin": 145,
+  "winterGesloten": false,
+  "tags": [
+    "kijken",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/34.jpg"
+}

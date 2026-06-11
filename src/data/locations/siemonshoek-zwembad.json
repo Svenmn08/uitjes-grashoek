@@ -1,0 +1,31 @@
+{
+  "id": 12,
+  "name": "Siemonshoek Zwembad",
+  "address": "Steenoven 10",
+  "city": "Meijel",
+  "lat": 51.35,
+  "lng": 5.883,
+  "website": "https://www.simonshoek.nl",
+  "description": "Openlucht zwembad bij camping Siemonshoek.",
+  "entreeKinderen": 6.25,
+  "entreeVolwassenen": 6.25,
+  "reistijdAutoMin": 12,
+  "reistijdFietsMin": 28,
+  "winterGesloten": true,
+  "tags": [
+    "zwembadbuiten",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "09:00-20:30",
+    "di": "09:00-13:00",
+    "wo": "09:00-20:30",
+    "do": "09:00-13:00",
+    "vr": "09:00-20:30",
+    "za": "09:00-17:00",
+    "zo": "09:00-16:00"
+  },
+  "photo": "/fotos/12.jpg"
+}

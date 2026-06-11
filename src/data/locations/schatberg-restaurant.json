@@ -1,0 +1,22 @@
+{
+  "id": 45,
+  "name": "Schatberg Restaurant",
+  "address": "Middenpeelweg 5",
+  "city": "Sevenum",
+  "lat": 51.383,
+  "lng": 5.976,
+  "website": "https://www.schatberg.nl/eten-drinken",
+  "description": "Restaurant op vakantiepark De Schatberg, ook toegankelijk voor dagbezoekers.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 9,
+  "reistijdFietsMin": 20,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/45.jpg"
+}

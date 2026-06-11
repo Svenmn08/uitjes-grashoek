@@ -1,0 +1,35 @@
+{
+  "id": 37,
+  "name": "Zooparc Overloon",
+  "address": "Stevensbeekseweg 21",
+  "city": "Overloon",
+  "lat": 51.577,
+  "lng": 5.94,
+  "website": "https://www.zooparc.nl",
+  "description": "Dierentuin met safaribeleving, speeltuinen en attracties voor het hele gezin.",
+  "entreeKinderen": 19.5,
+  "entreeVolwassenen": 19.5,
+  "reistijdAutoMin": 33,
+  "reistijdFietsMin": 90,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "restaurant",
+    "dierentuin",
+    "buitenspeeltuin",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "09:30-17:30",
+    "di": "09:30-17:30",
+    "wo": "09:30-17:30",
+    "do": "09:30-17:30",
+    "vr": "09:30-17:30",
+    "za": "09:30-17:30",
+    "zo": "09:30-17:30"
+  },
+  "photo": "/fotos/37.jpg"
+}

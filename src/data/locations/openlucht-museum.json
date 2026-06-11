@@ -1,0 +1,31 @@
+{
+  "id": 36,
+  "name": "Openlucht Museum",
+  "address": "Milderspaat 1",
+  "city": "Nederweert-Eind",
+  "lat": 51.277,
+  "lng": 5.777,
+  "website": "https://eynderhoof.nl",
+  "description": "Openluchtmuseum met historische gebouwen en demonstraties van ambachten.",
+  "entreeKinderen": 4,
+  "entreeVolwassenen": 9,
+  "reistijdAutoMin": 28,
+  "reistijdFietsMin": 74,
+  "winterGesloten": false,
+  "tags": [
+    "kijken",
+    "buiten"
+  ],
+  "leeftijdMin": 4,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": "13:00-17:00",
+    "wo": "13:00-17:00",
+    "do": "13:00-17:00",
+    "vr": null,
+    "za": null,
+    "zo": "13:00-17:00"
+  },
+  "photo": "/fotos/36.jpg"
+}

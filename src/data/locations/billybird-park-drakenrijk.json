@@ -1,0 +1,33 @@
+{
+  "id": 15,
+  "name": "BillyBird Park Drakenrijk",
+  "address": "Welkensvenweg 1",
+  "city": "Reuver",
+  "lat": 51.2687,
+  "lng": 6.0769,
+  "website": "https://billybird.nl/nl/drakenrijk",
+  "description": "Sprookjesachtig attractiepark speciaal voor jonge kinderen met drakenthema.",
+  "entreeKinderen": 5,
+  "entreeVolwassenen": 5,
+  "reistijdAutoMin": 27,
+  "reistijdFietsMin": 84,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "buitenspeeltuin",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 8,
+  "openingHours": {
+    "ma": "10:00-18:00",
+    "di": "10:00-18:00",
+    "wo": "10:00-18:00",
+    "do": "10:00-18:00",
+    "vr": "10:00-18:00",
+    "za": "10:00-18:00",
+    "zo": "10:00-18:00"
+  },
+  "photo": "/fotos/15.jpg"
+}

@@ -1,0 +1,23 @@
+{
+  "id": 49,
+  "name": "Vrouwen Gevangenis",
+  "address": "Prins Bernhardstraat 55",
+  "city": "Asten",
+  "lat": 51.403,
+  "lng": 5.745,
+  "website": null,
+  "description": "Historische vrouwengevangenis, nu een bijzondere bezienswaardigheid.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 19,
+  "reistijdFietsMin": 59,
+  "winterGesloten": false,
+  "tags": [
+    "kijken",
+    "buiten"
+  ],
+  "leeftijdMin": 6,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/49.jpg"
+}

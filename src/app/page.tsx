@@ -1,4 +1,4 @@
-import { getAllLocations } from "@/lib/locations";
+import { getAllLocations } from "@/lib/locationData";
 import LocationFilters from "@/app/components/LocationFilters";
 
 export default function Home() {

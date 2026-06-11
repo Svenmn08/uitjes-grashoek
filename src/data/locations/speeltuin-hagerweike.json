@@ -1,0 +1,25 @@
+{
+  "id": 27,
+  "name": "Speeltuin Hagerweike",
+  "address": "Broekhofpad 2",
+  "city": "Venlo",
+  "lat": 51.357,
+  "lng": 6.171,
+  "website": "https://www.visitnoordlimburg.nl/nl/speeltuin-hagerweike",
+  "description": "Avontuurlijke speeltuin in de bossen van Venlo.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 23,
+  "reistijdFietsMin": 64,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "buitenspeeltuin",
+    "gratis",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": null,
+  "photo": "/fotos/27.jpg"
+}

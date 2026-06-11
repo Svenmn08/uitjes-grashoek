@@ -1,0 +1,32 @@
+{
+  "id": 23,
+  "name": "Boegafun Venray",
+  "address": "Keizersveld 55",
+  "city": "Venray",
+  "lat": 51.5404,
+  "lng": 5.9945,
+  "website": "https://www.boegafun.nl/",
+  "description": "Binnenspeeltuin in Venray voor kinderen tot circa 12 jaar.",
+  "entreeKinderen": 8,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 25,
+  "reistijdFietsMin": 62,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "binnenspeeltuin",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": {
+    "ma": null,
+    "di": "10:00-18:00",
+    "wo": "10:00-18:00",
+    "do": "10:00-18:00",
+    "vr": "10:00-18:00",
+    "za": "10:00-18:00",
+    "zo": "10:00-18:00"
+  },
+  "photo": "/fotos/23.jpg"
+}

@@ -1,0 +1,25 @@
+{
+  "id": 8,
+  "name": "Meerdal Zwembad",
+  "address": "Laagheideweg 11",
+  "city": "America",
+  "lat": 51.457,
+  "lng": 5.953,
+  "website": "https://www.dagjecenterparcs.nl/NL",
+  "description": "Subtropisch zwembad op Center Parcs De Vossemeren.",
+  "entreeKinderen": 22,
+  "entreeVolwassenen": 22,
+  "reistijdAutoMin": 15,
+  "reistijdFietsMin": 42,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "zwembadbinnen",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/8.jpg"
+}

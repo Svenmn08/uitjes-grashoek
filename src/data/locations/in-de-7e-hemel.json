@@ -1,0 +1,32 @@
+{
+  "id": 26,
+  "name": "In de 7e Hemel",
+  "address": "Belgenhoek 7",
+  "city": "Grashoek",
+  "lat": 51.39,
+  "lng": 5.94,
+  "website": "https://inde7ehemel.com/pluk-en-theetuin/",
+  "description": "Pluk- en theetuin vlakbij huis in Grashoek. Ideaal voor een rustig uitje dichtbij.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 0,
+  "reistijdFietsMin": 1,
+  "winterGesloten": true,
+  "tags": [
+    "kijken",
+    "terras",
+    "buiten"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "10:00-17:30",
+    "do": "10:00-17:30",
+    "vr": "10:00-17:30",
+    "za": "10:00-17:30",
+    "zo": "10:00-17:30"
+  },
+  "photo": "/fotos/26.jpg"
+}

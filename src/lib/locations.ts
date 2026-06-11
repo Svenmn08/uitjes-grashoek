@@ -1,5 +1,3 @@
-import locationsData from "@/data/locations.json";
-
 export type Tag =
   | "spelen"
   | "kijken"
@@ -133,15 +131,6 @@ export function formatPrice(price: number): string {
   return `€ ${price.toFixed(2).replace(".", ",")}`;
 }
 
-const allLocs = (locationsData as { locations: Location[] }).locations;
-
-export function getAllLocations(): Location[] {
-  return allLocs;
-}
-
-export function getLocationById(id: number): Location | undefined {
-  return allLocs.find((l) => l.id === id);
-}
 
 export const TAG_LABELS: Record<Tag, string> = {
   spelen: "Spelen",

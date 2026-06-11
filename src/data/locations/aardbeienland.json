@@ -1,0 +1,27 @@
+{
+  "id": 21,
+  "name": "Aardbeienland",
+  "address": "Kreuzelweg 3",
+  "city": "Horst",
+  "lat": 51.45,
+  "lng": 6.067,
+  "website": "https://aardbeienland.nl",
+  "description": "Zelf aardbeien plukken en genieten van verse producten. Met restaurant en buitenspeeltuin.",
+  "entreeKinderen": 6.5,
+  "entreeVolwassenen": 6.5,
+  "reistijdAutoMin": 20,
+  "reistijdFietsMin": 42,
+  "winterGesloten": true,
+  "tags": [
+    "spelen",
+    "kijken",
+    "restaurant",
+    "terras",
+    "buitenspeeltuin",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": null,
+  "photo": "/fotos/21.jpg"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 25,
+  "name": "Speeltuin Kitskensberg",
+  "address": "Oude Keulsebaan 150",
+  "city": "Roermond",
+  "lat": 51.19,
+  "lng": 6.003,
+  "website": "https://www.speeltuinkitskensberg.nl",
+  "description": "Grote avontuurlijke speeltuin in park Kitskensberg, gratis toegankelijk.",
+  "entreeKinderen": 1.25,
+  "entreeVolwassenen": 1.25,
+  "reistijdAutoMin": 37,
+  "reistijdFietsMin": 111,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "buitenspeeltuin",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "10:00-17:00",
+    "do": null,
+    "vr": "10:00-17:00",
+    "za": "10:00-17:00",
+    "zo": "10:00-17:00"
+  },
+  "photo": "/fotos/25.jpg"
+}

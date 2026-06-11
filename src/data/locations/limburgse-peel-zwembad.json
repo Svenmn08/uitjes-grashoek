@@ -1,0 +1,25 @@
+{
+  "id": 9,
+  "name": "Limburgse Peel Zwembad",
+  "address": "Hommersumseweg 43",
+  "city": "America",
+  "lat": 51.449,
+  "lng": 5.963,
+  "website": "https://www.dagjecenterparcs.nl/NL",
+  "description": "Subtropisch zwembad op Center Parcs Limburgse Peel.",
+  "entreeKinderen": 16,
+  "entreeVolwassenen": 16,
+  "reistijdAutoMin": 14,
+  "reistijdFietsMin": 39,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "zwembadbinnen",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/9.jpg"
+}

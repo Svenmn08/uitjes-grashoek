@@ -1,0 +1,30 @@
+{
+  "id": 51,
+  "name": "De Pool Maasbree",
+  "address": "Dorpstraat 20",
+  "city": "Maasbree",
+  "lat": 51.383,
+  "lng": 6.048,
+  "website": "https://cafedepoolmaasbree.nl",
+  "description": "Café-restaurant in het centrum van Maasbree.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 14,
+  "reistijdFietsMin": 34,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": "11:00-01:00",
+    "wo": "11:00-01:00",
+    "do": "11:00-01:00",
+    "vr": "11:00-02:00",
+    "za": "11:00-02:00",
+    "zo": "10:00-01:00"
+  },
+  "photo": "/fotos/51.jpg"
+}

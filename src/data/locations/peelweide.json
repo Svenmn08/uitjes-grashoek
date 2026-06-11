@@ -1,0 +1,25 @@
+{
+  "id": 54,
+  "name": "Peelweide",
+  "address": "Spiesberg 23",
+  "city": "Grashoek",
+  "lat": 51.391,
+  "lng": 5.943,
+  "website": "https://www.peelweide.nl",
+  "description": "Buitenspeeltuin in Grashoek zelf.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 0,
+  "reistijdFietsMin": 1,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "buitenspeeltuin",
+    "gratis",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": null,
+  "photo": "/fotos/54.jpg"
+}

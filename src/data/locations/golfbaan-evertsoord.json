@@ -1,0 +1,31 @@
+{
+  "id": 42,
+  "name": "Golfbaan Evertsoord",
+  "address": "Maasduinenweg 1",
+  "city": "Evertsoord",
+  "lat": 51.418,
+  "lng": 6.003,
+  "website": "https://www.depeelsegolf.nl",
+  "description": "Mooie golfbaan midden in de Peelstreek, ook geschikt voor beginners.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 8,
+  "reistijdFietsMin": 20,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant",
+    "buiten"
+  ],
+  "leeftijdMin": 8,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "09:00-17:00",
+    "di": "09:00-17:00",
+    "wo": "09:00-17:00",
+    "do": "09:00-17:00",
+    "vr": null,
+    "za": null,
+    "zo": null
+  },
+  "photo": "/fotos/42.jpg"
+}

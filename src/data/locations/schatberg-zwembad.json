@@ -1,0 +1,26 @@
+{
+  "id": 7,
+  "name": "Schatberg Zwembad",
+  "address": "Middenpeelweg 5",
+  "city": "Sevenum",
+  "lat": 51.383,
+  "lng": 5.976,
+  "website": "https://www.schatberg.nl/zwemmen",
+  "description": "Subtropisch zwemparadijs op vakantiepark De Schatberg met buiten- en binnenzwembad.",
+  "entreeKinderen": 7.5,
+  "entreeVolwassenen": 7.5,
+  "reistijdAutoMin": 9,
+  "reistijdFietsMin": 20,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "zwembadbinnen",
+    "zwembadbuiten",
+    "buiten",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/7.jpg"
+}

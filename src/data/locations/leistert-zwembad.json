@@ -1,0 +1,24 @@
+{
+  "id": 28,
+  "name": "Leistert Zwembad",
+  "address": "Heldensedijk 5",
+  "city": "Roggel",
+  "lat": 51.277,
+  "lng": 5.93,
+  "website": "https://www.leistert.nl/",
+  "description": "Subtropisch zwembad op vakantiepark De Leistert.",
+  "entreeKinderen": 7.5,
+  "entreeVolwassenen": 7.5,
+  "reistijdAutoMin": 23,
+  "reistijdFietsMin": 57,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "zwembadbinnen",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/28.jpg"
+}

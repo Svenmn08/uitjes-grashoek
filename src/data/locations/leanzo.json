@@ -1,0 +1,30 @@
+{
+  "id": 40,
+  "name": "Leanzo",
+  "address": "Helenaveenseweg 5",
+  "city": "Grashoek",
+  "lat": 51.39,
+  "lng": 5.941,
+  "website": "http://www.leanzo.nl",
+  "description": "Restaurant en partycentrum in Grashoek.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 0,
+  "reistijdFietsMin": 1,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "13:00-17:00",
+    "di": null,
+    "wo": "19:00-00:00",
+    "do": "19:00-00:00",
+    "vr": "19:00-01:00",
+    "za": "18:00-02:00",
+    "zo": "11:00-00:00"
+  },
+  "photo": "/fotos/40.jpg"
+}

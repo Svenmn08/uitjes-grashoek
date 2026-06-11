@@ -1,0 +1,31 @@
+{
+  "id": 24,
+  "name": "Eetcafé Van Horne Hoeve",
+  "address": "Trancheeweg 22",
+  "city": "Weert",
+  "lat": 51.243,
+  "lng": 5.71,
+  "website": "https://www.vanhorne1062.nl",
+  "description": "Gezellig eetcafé op een historische hoeve, met terras en kindvriendelijke sfeer.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 39,
+  "reistijdFietsMin": 94,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant",
+    "terras"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "11:00-21:00",
+    "do": "11:00-21:00",
+    "vr": "11:00-21:00",
+    "za": "11:00-21:00",
+    "zo": "11:00-21:00"
+  },
+  "photo": "/fotos/24.jpg"
+}

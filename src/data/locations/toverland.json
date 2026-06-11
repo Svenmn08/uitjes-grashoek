@@ -1,0 +1,36 @@
+{
+  "id": 14,
+  "name": "Toverland",
+  "address": "Toverlaan 2",
+  "city": "Sevenum",
+  "lat": 51.398,
+  "lng": 5.984,
+  "website": "https://www.toverland.com",
+  "description": "Groot attractiepark met achtbanen, waterattracties en een overdekte sectie. Voor alle leeftijden.",
+  "entreeKinderen": 32.5,
+  "entreeVolwassenen": 39.5,
+  "reistijdAutoMin": 9,
+  "reistijdFietsMin": 21,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "restaurant",
+    "terras",
+    "binnenspeeltuin",
+    "slechtweer",
+    "buiten"
+  ],
+  "leeftijdMin": 2,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "10:00-18:00",
+    "di": "10:00-18:00",
+    "wo": "10:00-18:00",
+    "do": "10:00-18:00",
+    "vr": "10:00-18:00",
+    "za": "10:00-18:00",
+    "zo": "10:00-18:00"
+  },
+  "photo": "/fotos/14.jpg"
+}

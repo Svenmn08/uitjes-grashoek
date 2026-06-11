@@ -1,0 +1,32 @@
+{
+  "id": 16,
+  "name": "Kasteeltuinen Arcen",
+  "address": "Lingsforterweg 29",
+  "city": "Arcen",
+  "lat": 51.471,
+  "lng": 6.184,
+  "website": "https://www.kasteeltuinen.nl/nl/",
+  "description": "Prachtige kasteeltuinen met rozentuin, theehuis en watertuinen. Uniek in Nederland.",
+  "entreeKinderen": 10.75,
+  "entreeVolwassenen": 21.5,
+  "reistijdAutoMin": 31,
+  "reistijdFietsMin": 85,
+  "winterGesloten": false,
+  "tags": [
+    "kijken",
+    "restaurant",
+    "buiten"
+  ],
+  "leeftijdMin": 4,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "10:00-18:00",
+    "di": "10:00-18:00",
+    "wo": "10:00-18:00",
+    "do": "10:00-18:00",
+    "vr": "10:00-18:00",
+    "za": "10:00-18:00",
+    "zo": "10:00-18:00"
+  },
+  "photo": "/fotos/16.jpg"
+}

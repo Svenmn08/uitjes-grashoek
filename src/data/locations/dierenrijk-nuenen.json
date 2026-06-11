@@ -1,0 +1,35 @@
+{
+  "id": 38,
+  "name": "Dierenrijk Nuenen",
+  "address": "Baroniehei 1",
+  "city": "Mierlo",
+  "lat": 51.47,
+  "lng": 5.637,
+  "website": "https://www.eindhovenzoo.nl",
+  "description": "Dierenpark in de regio Eindhoven met honderden dieren en meerdere speelparadijzen.",
+  "entreeKinderen": 22.5,
+  "entreeVolwassenen": 24.5,
+  "reistijdAutoMin": 29,
+  "reistijdFietsMin": 94,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "kijken",
+    "restaurant",
+    "dierentuin",
+    "binnenspeeltuin",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "09:30-17:30",
+    "di": "09:30-17:30",
+    "wo": "09:30-17:30",
+    "do": "09:30-17:30",
+    "vr": "09:30-17:30",
+    "za": "09:30-17:30",
+    "zo": "09:30-17:30"
+  },
+  "photo": "/fotos/38.jpg"
+}

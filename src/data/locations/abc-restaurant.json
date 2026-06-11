@@ -1,0 +1,30 @@
+{
+  "id": 44,
+  "name": "ABC Restaurant",
+  "address": "Midden Peelweg 7",
+  "city": "Sevenum",
+  "lat": 51.381,
+  "lng": 5.975,
+  "website": "https://www.abcrestaurants.com/sevenum/nl/",
+  "description": "Restaurant aan de Peelweg in Sevenum.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 8,
+  "reistijdFietsMin": 20,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant"
+  ],
+  "leeftijdMin": null,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "16:30-21:30",
+    "do": "16:30-21:30",
+    "vr": "16:30-21:30",
+    "za": "16:00-21:30",
+    "zo": "15:00-21:30"
+  },
+  "photo": "/fotos/44.jpg"
+}

@@ -1,0 +1,25 @@
+{
+  "id": 18,
+  "name": "Badoe Farm",
+  "address": "Haambergweg 14",
+  "city": "Beringe",
+  "lat": 51.378,
+  "lng": 5.973,
+  "website": "https://boebadoefarm.nl",
+  "description": "Leuke kinderboerderij waar kinderen dieren kunnen aaien en voeren.",
+  "entreeKinderen": 10,
+  "entreeVolwassenen": 15,
+  "reistijdAutoMin": 7,
+  "reistijdFietsMin": 18,
+  "winterGesloten": false,
+  "tags": [
+    "kijken",
+    "restaurant",
+    "kinderboerderij",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 10,
+  "openingHours": null,
+  "photo": "/fotos/18.jpg"
+}

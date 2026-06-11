@@ -1,0 +1,32 @@
+{
+  "id": 2,
+  "name": "Kinderboerderij Hagerhof",
+  "address": "Hagerlei 1",
+  "city": "Venlo",
+  "lat": 51.3667,
+  "lng": 6.15,
+  "website": "https://kinderboerderijhagerhof.nl",
+  "description": "Kinderboerderij met veel dieren en speelmogelijkheden voor de kleinsten.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 22,
+  "reistijdFietsMin": 63,
+  "winterGesloten": false,
+  "tags": [
+    "kinderboerderij",
+    "gratis",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 10,
+  "openingHours": {
+    "ma": null,
+    "di": "10:00-17:00",
+    "wo": "10:00-17:00",
+    "do": "10:00-17:00",
+    "vr": "10:00-17:00",
+    "za": "10:00-17:00",
+    "zo": "10:00-17:00"
+  },
+  "photo": "/fotos/2.jpg"
+}

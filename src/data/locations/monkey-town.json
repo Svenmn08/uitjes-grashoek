@@ -1,0 +1,32 @@
+{
+  "id": 5,
+  "name": "Monkey Town",
+  "address": "Heymansstraat 101",
+  "city": "Boekend",
+  "lat": 51.3848,
+  "lng": 6.1895,
+  "website": "https://monkeytown.eu/nl",
+  "description": "Binnenspeelparadijs met meerdere niveaus aan klimmen, kruipen en glijden.",
+  "entreeKinderen": 10.95,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 21,
+  "reistijdFietsMin": 75,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "binnenspeeltuin",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": {
+    "ma": "09:00-18:00",
+    "di": "09:00-18:00",
+    "wo": "09:00-18:00",
+    "do": "09:00-18:00",
+    "vr": "09:00-18:00",
+    "za": "09:00-18:00",
+    "zo": "09:00-18:00"
+  },
+  "photo": "/fotos/5.jpg"
+}

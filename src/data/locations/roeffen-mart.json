@@ -1,0 +1,25 @@
+{
+  "id": 6,
+  "name": "Roeffen Mart",
+  "address": "Meerlosebaan 15",
+  "city": "Grubbenvorst",
+  "lat": 51.408,
+  "lng": 6.133,
+  "website": "https://www.speeltuinroeffenmart.nl",
+  "description": "Speeltuin met klassieke en avontuurlijke speeltoestellen in een groene omgeving.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 26,
+  "reistijdFietsMin": 59,
+  "winterGesloten": false,
+  "tags": [
+    "spelen",
+    "buitenspeeltuin",
+    "gratis",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": null,
+  "photo": "/fotos/6.jpg"
+}
