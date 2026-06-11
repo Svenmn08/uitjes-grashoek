@@ -1,0 +1,54 @@
+backend:
+  name: github
+  repo: Svenmn08/uitjes-grashoek
+  branch: main
+  auth_type: pkce
+  app_id: VERVANG_MET_JOUW_CLIENT_ID
+
+media_folder: public/fotos
+public_folder: /fotos
+
+locale: nl
+
+collections:
+  - name: locaties
+    label: Locaties
+    files:
+      - label: Alle locaties
+        name: locations
+        file: src/data/locations.json
+        fields:
+          - name: locations
+            label: Locaties
+            widget: list
+            identifier_field: name
+            fields:
+              - {name: id, widget: hidden}
+              - {name: name, label: Naam, widget: string}
+              - {name: address, widget: hidden}
+              - {name: city, widget: hidden}
+              - {name: lat, widget: hidden}
+              - {name: lng, widget: hidden}
+              - {name: website, widget: hidden}
+              - {name: description, label: Beschrijving, widget: text}
+              - {name: entreeKinderen, label: "Entree kinderen (€)", widget: number, value_type: float, default: 0}
+              - {name: entreeVolwassenen, label: "Entree volwassenen (€)", widget: number, value_type: float, default: 0}
+              - {name: reistijdAutoMin, widget: hidden}
+              - {name: reistijdFietsMin, widget: hidden}
+              - {name: winterGesloten, label: "Winter gesloten", widget: boolean, default: false}
+              - {name: tags, widget: hidden}
+              - {name: photo, widget: hidden}
+              - {name: leeftijdMin, widget: hidden}
+              - {name: leeftijdMax, widget: hidden}
+              - name: openingHours
+                label: Openingstijden
+                widget: object
+                required: false
+                fields:
+                  - {name: ma, label: Maandag, widget: string, required: false, hint: "bijv. 09:00-17:00 — leeg laten als gesloten die dag"}
+                  - {name: di, label: Dinsdag, widget: string, required: false}
+                  - {name: wo, label: Woensdag, widget: string, required: false}
+                  - {name: do, label: Donderdag, widget: string, required: false}
+                  - {name: vr, label: Vrijdag, widget: string, required: false}
+                  - {name: za, label: Zaterdag, widget: string, required: false}
+                  - {name: zo, label: Zondag, widget: string, required: false}

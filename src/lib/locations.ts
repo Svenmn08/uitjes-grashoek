@@ -133,12 +133,14 @@ export function formatPrice(price: number): string {
   return `€ ${price.toFixed(2).replace(".", ",")}`;
 }
 
+const allLocs = (locationsData as { locations: Location[] }).locations;
+
 export function getAllLocations(): Location[] {
-  return locationsData as Location[];
+  return allLocs;
 }
 
 export function getLocationById(id: number): Location | undefined {
-  return (locationsData as Location[]).find((l) => l.id === id);
+  return allLocs.find((l) => l.id === id);
 }
 
 export const TAG_LABELS: Record<Tag, string> = {
