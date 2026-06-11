@@ -710,7 +710,7 @@ export default function LocationFilters({ locations }: { locations: Location[] }
             <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-2">
               Activiteit / Faciliteiten
             </p>
-            <div className="flex gap-2 flex-nowrap overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible">
+            <div className="flex gap-2 flex-wrap">
               {FILTER_TAGS.map((tag) => (
                 <button
                   key={tag}
@@ -733,7 +733,7 @@ export default function LocationFilters({ locations }: { locations: Location[] }
             <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide mb-2">
               Weer
             </p>
-            <div className="flex gap-2 flex-nowrap overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible">
+            <div className="flex gap-2 flex-wrap">
               {WEER_TAGS.map((tag) => {
                 const display = WEER_DISPLAY[tag];
                 return (
