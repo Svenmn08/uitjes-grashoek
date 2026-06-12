@@ -1,0 +1,32 @@
+{
+  "id": 68,
+  "name": "Aan de Drift",
+  "address": "Lorbaan 9A",
+  "city": "America",
+  "lat": 51.444,
+  "lng": 6.036,
+  "website": "https://aandedrift.nl",
+  "description": "Pannenkoekrestaurant en bosbrasserie aan de rand van de Schadijkse Bossen. Ook informatiepunt voor wandel- en fietsroutes in de omgeving.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 15,
+  "reistijdFietsMin": 35,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant",
+    "terras",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": null,
+    "do": null,
+    "vr": null,
+    "za": "10:00-19:30",
+    "zo": "10:00-19:30"
+  },
+  "photo": null
+}

@@ -1,0 +1,23 @@
+{
+  "id": 73,
+  "name": "Speelbos Roeventerpeel",
+  "address": "Kwegt 1",
+  "city": "Helden",
+  "lat": 51.34,
+  "lng": 5.96,
+  "website": "https://www.limburgs-landschap.nl/natuurgebied/roeventerpeel/",
+  "description": "Natuurgebied met speelmogelijkheden in het veenlandschap van de Roeventerpeel. Mooie wandelroutes en een ideale plek om buiten te spelen.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 12,
+  "reistijdFietsMin": 24,
+  "winterGesloten": false,
+  "tags": [
+    "buiten",
+    "gratis"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": null
+}

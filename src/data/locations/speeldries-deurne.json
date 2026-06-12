@@ -1,0 +1,24 @@
+{
+  "id": 63,
+  "name": "Speeldries Deurne",
+  "address": "Rembrandt van Rijnstraat 5",
+  "city": "Deurne",
+  "lat": 51.468,
+  "lng": 5.807,
+  "website": "https://www.speeltuindespeuldries.nl",
+  "description": "Grote buitenspeeltuin in Deurne met meer dan 20 speeltoestellen en een brede zandbak. Vrij toegankelijk voor alle kinderen.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 20,
+  "reistijdFietsMin": 50,
+  "winterGesloten": false,
+  "tags": [
+    "buitenspeeltuin",
+    "gratis",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": null,
+  "photo": null
+}

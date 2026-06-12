@@ -1,0 +1,23 @@
+{
+  "id": 71,
+  "name": "Botanische Tuin Jochumhof",
+  "address": "Veerweg 1b",
+  "city": "Steyl",
+  "lat": 51.335,
+  "lng": 6.118,
+  "website": "https://www.jochumhof.com",
+  "description": "Prachtige botanische tuin gesticht in 1933 in het kleurige kloosterdorp Steyl. Met rotstuin, geurtuin, mediterrane tuin en kruidhof.",
+  "entreeKinderen": 4.5,
+  "entreeVolwassenen": 4.5,
+  "reistijdAutoMin": 22,
+  "reistijdFietsMin": 56,
+  "winterGesloten": true,
+  "tags": [
+    "kijken",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": null
+}

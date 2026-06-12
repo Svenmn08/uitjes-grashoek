@@ -1,0 +1,26 @@
+{
+  "id": 74,
+  "name": "Irrland",
+  "address": "Am Scheidweg 1",
+  "city": "Kevelaer-Twisteden",
+  "lat": 51.5556,
+  "lng": 6.2047,
+  "website": "https://www.irrland.de",
+  "description": "Avontuurlijke boerderijbeleving net over de grens in Duitsland bij Kevelaer. Met doolhof, dierenweide en allerlei speeltuinen. Online reserveren verplicht.",
+  "entreeKinderen": 12.5,
+  "entreeVolwassenen": 12.5,
+  "reistijdAutoMin": 36,
+  "reistijdFietsMin": 103,
+  "winterGesloten": true,
+  "tags": [
+    "spelen",
+    "buiten",
+    "buitenspeeltuin",
+    "kinderboerderij",
+    "dierentuin"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": null
+}

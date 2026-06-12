@@ -1,0 +1,31 @@
+{
+  "id": 69,
+  "name": "Museum De Locht",
+  "address": "Broekhuizerdijk 16d",
+  "city": "Melderslo",
+  "lat": 51.4636,
+  "lng": 6.0904,
+  "website": "https://delocht.nl",
+  "description": "Openluchtmuseum (museumdorp) over de streekgeschiedenis, asperge- en champignonteelt in Noord-Limburg. Authentieke gebouwen en ambachten.",
+  "entreeKinderen": 5.5,
+  "entreeVolwassenen": 11.0,
+  "reistijdAutoMin": 21,
+  "reistijdFietsMin": 52,
+  "winterGesloten": false,
+  "tags": [
+    "kijken",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": "10:00-17:00",
+    "wo": "10:00-17:00",
+    "do": null,
+    "vr": null,
+    "za": "10:00-17:00",
+    "zo": "10:00-17:00"
+  },
+  "photo": null
+}

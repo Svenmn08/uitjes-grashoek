@@ -1,0 +1,34 @@
+{
+  "id": 65,
+  "name": "Hoeve Willem III",
+  "address": "Soemeersingel 127",
+  "city": "Helenaveen",
+  "lat": 51.405,
+  "lng": 5.853,
+  "website": "https://www.hoevewillemdrie.nl",
+  "description": "Kindvriendelijk restaurant op een historische boerderij (1913) in de Peel. Met zelfgemaakte pizza's, ambachtelijk ijs, grote buitenspeeltuin en speelzolder.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 13,
+  "reistijdFietsMin": 25,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant",
+    "buitenspeeltuin",
+    "binnenspeeltuin",
+    "terras",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "11:30-20:00",
+    "di": "11:30-20:00",
+    "wo": "11:30-20:00",
+    "do": "11:30-20:00",
+    "vr": "11:30-20:00",
+    "za": "11:30-20:00",
+    "zo": "11:30-20:00"
+  },
+  "photo": null
+}

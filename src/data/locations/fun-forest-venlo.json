@@ -1,0 +1,24 @@
+{
+  "id": 61,
+  "name": "Fun Forest Venlo",
+  "address": "Verlengde Trappistenweg 35",
+  "city": "Tegelen",
+  "lat": 51.338,
+  "lng": 6.165,
+  "website": "https://www.funforest.nl/venlo/",
+  "description": "Spectaculair klimbos in de bossen bij Tegelen met uitdagende parcours voor verschillende leeftijden en ervaringsniveaus. Van mini (6+) tot volwassenen.",
+  "entreeKinderen": 20.0,
+  "entreeVolwassenen": 29.0,
+  "reistijdAutoMin": 25,
+  "reistijdFietsMin": 66,
+  "winterGesloten": true,
+  "tags": [
+    "spelen",
+    "buiten",
+    "buitenspeeltuin"
+  ],
+  "leeftijdMin": 6,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": 67,
+  "name": "Restaurant Spruit",
+  "address": "Raadhuisplein 41",
+  "city": "Panningen",
+  "lat": 51.349,
+  "lng": 5.987,
+  "website": "https://restaurant-spruit.nl",
+  "description": "Hip en trendy restaurant in het centrum van Panningen. Gezond en lokaal eten, kindvriendelijke sfeer.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 12,
+  "reistijdFietsMin": 23,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": null
+}

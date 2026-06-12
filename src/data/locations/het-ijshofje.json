@@ -1,0 +1,24 @@
+{
+  "id": 64,
+  "name": "Het IJshofje",
+  "address": "Dorpsstraat 16",
+  "city": "Meijel",
+  "lat": 51.353,
+  "lng": 5.878,
+  "website": "https://www.ijshofjemeijel.nl",
+  "description": "Gezellig ijs- en speelparadijs in het centrum van Meijel. Winnaar Gouden IJsspatel 2024. Geen entreegeld, je betaalt voor consumptie.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 12,
+  "reistijdFietsMin": 25,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant",
+    "binnenspeeltuin",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 10,
+  "openingHours": null,
+  "photo": null
+}

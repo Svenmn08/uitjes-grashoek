@@ -1,0 +1,25 @@
+{
+  "id": 75,
+  "name": "Jagersrust",
+  "address": "Straelseweg 33F",
+  "city": "Velden",
+  "lat": 51.402,
+  "lng": 6.168,
+  "website": "https://www.jagersrustvelden.nl",
+  "description": "Ambachtelijk pannenkoekenrestaurant al meer dan 40 jaar in Velden. Met grote speeltuin, afgesloten speelweide en het unieke Smokkelpad in het bos.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 24,
+  "reistijdFietsMin": 63,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant",
+    "buitenspeeltuin",
+    "terras",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": null
+}

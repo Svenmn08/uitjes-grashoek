@@ -1,0 +1,31 @@
+{
+  "id": 59,
+  "name": "Missiemuseum Steyl",
+  "address": "Sint Michaëlstraat 7",
+  "city": "Steyl",
+  "lat": 51.3337,
+  "lng": 6.1201,
+  "website": "https://www.missiemuseum.nl",
+  "description": "Etnologisch en natuurhistorisch museum in het schilderachtige kloosterdorp Steyl. Bijzondere collectie uit de missietijd met voorwerpen uit alle werelddelen.",
+  "entreeKinderen": 5.0,
+  "entreeVolwassenen": 9.0,
+  "reistijdAutoMin": 22,
+  "reistijdFietsMin": 55,
+  "winterGesloten": false,
+  "tags": [
+    "kijken",
+    "slechtweer"
+  ],
+  "leeftijdMin": 4,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": "10:00-17:00",
+    "wo": "10:00-17:00",
+    "do": "10:00-17:00",
+    "vr": "10:00-17:00",
+    "za": "10:00-17:00",
+    "zo": "12:00-17:00"
+  },
+  "photo": null
+}

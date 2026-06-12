@@ -1,0 +1,24 @@
+{
+  "id": 57,
+  "name": "De Heldense Bossen",
+  "address": "Heldense Bossen 6",
+  "city": "Helden",
+  "lat": 51.3167,
+  "lng": 6.0167,
+  "website": "https://www.ardoer.com/nl/heldensebossen",
+  "description": "Uitgestrekt bos- en recreatiegebied bij Helden met speeltuinen, wandelpaden en een camping. Ideaal voor een dagje buiten in de natuur.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 17,
+  "reistijdFietsMin": 39,
+  "winterGesloten": false,
+  "tags": [
+    "buiten",
+    "buitenspeeltuin",
+    "gratis"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": null
+}

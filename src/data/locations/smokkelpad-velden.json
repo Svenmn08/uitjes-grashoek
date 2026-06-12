@@ -1,0 +1,23 @@
+{
+  "id": 76,
+  "name": "Smokkelpad Velden",
+  "address": "Straelseweg 33F",
+  "city": "Velden",
+  "lat": 51.402,
+  "lng": 6.169,
+  "website": "https://www.jagersrustvelden.nl/smokkelpad/",
+  "description": "Grensoverschrijdend avonturenpad van 2,6 km rondom het bos bij Jagersrust in Velden. Bewegwijzerd met uilen, speurtochkaart verkrijgbaar bij het restaurant.",
+  "entreeKinderen": 1.0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 24,
+  "reistijdFietsMin": 63,
+  "winterGesloten": false,
+  "tags": [
+    "buiten",
+    "spelen"
+  ],
+  "leeftijdMin": 3,
+  "leeftijdMax": 12,
+  "openingHours": null,
+  "photo": null
+}

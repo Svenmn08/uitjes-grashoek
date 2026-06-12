@@ -1,0 +1,35 @@
+{
+  "id": 62,
+  "name": "Wouterbergen",
+  "address": "Nieuwendijk 122",
+  "city": "Someren-Heide",
+  "lat": 51.39,
+  "lng": 5.73,
+  "website": "https://www.zorgboerderijwouterbergen.nl",
+  "description": "Zorgboerderij met gratis te bezoeken dierenpark en grote speeltuin in een groene omgeving. Aangenaam terras en lunchcafé voor de ouders.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 23,
+  "reistijdFietsMin": 59,
+  "winterGesloten": false,
+  "tags": [
+    "kinderboerderij",
+    "buitenspeeltuin",
+    "restaurant",
+    "terras",
+    "gratis",
+    "buiten"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": 12,
+  "openingHours": {
+    "ma": "10:00-17:00",
+    "di": "10:00-17:00",
+    "wo": "10:00-17:00",
+    "do": "10:00-17:00",
+    "vr": "10:00-17:00",
+    "za": "10:00-17:00",
+    "zo": "10:00-17:00"
+  },
+  "photo": null
+}

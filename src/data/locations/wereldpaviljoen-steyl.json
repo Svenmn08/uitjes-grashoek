@@ -1,0 +1,31 @@
+{
+  "id": 58,
+  "name": "Wereldpaviljoen Steyl",
+  "address": "Sint Michaëlstraat 6a",
+  "city": "Steyl",
+  "lat": 51.3353,
+  "lng": 6.1193,
+  "website": "https://wereldpaviljoen.com",
+  "description": "Boeiend belevingscentrum in het kleurige kloosterdorp Steyl over wereldreligies, culturen en de missiegeschiedenis. Met interactieve exposities.",
+  "entreeKinderen": 6.0,
+  "entreeVolwassenen": 10.0,
+  "reistijdAutoMin": 22,
+  "reistijdFietsMin": 55,
+  "winterGesloten": false,
+  "tags": [
+    "kijken",
+    "slechtweer"
+  ],
+  "leeftijdMin": 3,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "13:00-17:00",
+    "do": null,
+    "vr": null,
+    "za": null,
+    "zo": "13:00-17:00"
+  },
+  "photo": null
+}

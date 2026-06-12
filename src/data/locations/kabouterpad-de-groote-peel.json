@@ -1,0 +1,23 @@
+{
+  "id": 72,
+  "name": "Kabouterpad De Groote Peel",
+  "address": "Moostdijk 15",
+  "city": "Ospel",
+  "lat": 51.321,
+  "lng": 5.804,
+  "website": "https://www.buitencentrumdepelen.nl",
+  "description": "Avontuurlijk kabouterpad van 700m voor kleuters (3-6 jaar) in Nationaal Park De Groote Peel. Met speciale rugzak en schildpadpet. Vrij toegankelijk.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 20,
+  "reistijdFietsMin": 50,
+  "winterGesloten": false,
+  "tags": [
+    "buiten",
+    "gratis"
+  ],
+  "leeftijdMin": 3,
+  "leeftijdMax": 8,
+  "openingHours": null,
+  "photo": null
+}

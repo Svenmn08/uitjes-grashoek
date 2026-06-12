@@ -1,0 +1,30 @@
+{
+  "id": 66,
+  "name": "De Turfhoeve",
+  "address": "Middenpeelweg 1",
+  "city": "Sevenum",
+  "lat": 51.42,
+  "lng": 6.035,
+  "website": "https://www.turfhoeve.nl",
+  "description": "Klassiek pannenkoekenrestaurant in Sevenum, al open sinds 1974. Ruim aanbod pannenkoeken voor het hele gezin.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 14,
+  "reistijdFietsMin": 29,
+  "winterGesloten": false,
+  "tags": [
+    "restaurant"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": "12:00-21:00",
+    "di": "12:00-21:00",
+    "wo": "12:00-21:00",
+    "do": "12:00-21:00",
+    "vr": "12:00-21:00",
+    "za": "12:00-21:00",
+    "zo": "11:00-21:00"
+  },
+  "photo": null
+}

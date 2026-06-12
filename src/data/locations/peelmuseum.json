@@ -1,0 +1,31 @@
+{
+  "id": 70,
+  "name": "Peelmuseum",
+  "address": "Griendtsveenseweg 69",
+  "city": "America",
+  "lat": 51.446,
+  "lng": 6.031,
+  "website": "https://www.peelmuseum.nl",
+  "description": "Museum over de rijke geschiedenis van de Peel: van veenontginning tot turfstekers. Inclusief rondleiding en gids.",
+  "entreeKinderen": 4.0,
+  "entreeVolwassenen": 9.0,
+  "reistijdAutoMin": 15,
+  "reistijdFietsMin": 34,
+  "winterGesloten": false,
+  "tags": [
+    "kijken",
+    "slechtweer"
+  ],
+  "leeftijdMin": 4,
+  "leeftijdMax": null,
+  "openingHours": {
+    "ma": null,
+    "di": null,
+    "wo": "13:30-16:30",
+    "do": null,
+    "vr": null,
+    "za": null,
+    "zo": "13:30-16:30"
+  },
+  "photo": null
+}
