@@ -1,0 +1,23 @@
+{
+  "id": 77,
+  "name": "Landal De Lommerbergen - Zwembad",
+  "address": "Lommerbergen 1",
+  "city": "Reuver",
+  "lat": 51.283,
+  "lng": 6.1,
+  "website": "https://www.landal.nl/parken/de-lommerbergen",
+  "description": "Overdekt subtropisch zwembad bij vakantiepark Landal De Lommerbergen. Met glijbanen en peuterbad. Toegankelijk voor dagbezoekers.",
+  "entreeKinderen": 0,
+  "entreeVolwassenen": 0,
+  "reistijdAutoMin": 32,
+  "reistijdFietsMin": 80,
+  "winterGesloten": false,
+  "tags": [
+    "zwembadbinnen",
+    "slechtweer"
+  ],
+  "leeftijdMin": 0,
+  "leeftijdMax": null,
+  "openingHours": null,
+  "photo": "/fotos/32.jpg"
+}
